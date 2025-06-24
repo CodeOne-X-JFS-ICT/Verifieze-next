@@ -1,113 +1,81 @@
+'use client';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav style={{ 
-      backgroundColor: '#fff', 
-      padding: '16px 40px', 
-      display: 'flex', 
-      justifyContent: 'space-between', 
-      alignItems: 'center',
-      borderBottom: '1px solid #e5e7eb',
-      height: '70px'
-    }}>
-      {/* Logo Section */}
-      <div style={{ 
-        width: '100px', 
-        height: '24px' 
-      }}>
-        <Image
-          src="/images/verifieze-logo.png"
-          alt="Verifieze Logo"
-          width={100}
-          height={24}
-          priority
-        />
+    <nav className="bg-white border-b border-gray-200 px-4 md:px-10 py-4">
+      <div className="flex justify-between items-center h-[70px]">
+        {/* Logo */}
+        <div className="w-[100px] h-6">
+          <Image
+            src="/images/verifieze-logo.png"
+            alt="Verifieze Logo"
+            width={100}
+            height={24}
+            priority
+          />
+        </div>
+
+        {/* Desktop Nav Links */}
+        <div className="hidden lg:flex items-center gap-8">
+          <Link href="#"><span className="text-gray-700 text-base font-medium">Products</span></Link>
+          <Link href="#"><span className="text-gray-700 text-base font-medium">Due Diligence</span></Link>
+          <Link href="#"><span className="text-gray-700 text-base font-medium">Data Security</span></Link>
+          <Link href="#"><span className="text-gray-700 text-base font-medium">About JFS</span></Link>
+          <Link href="#"><span className="text-gray-700 text-base font-medium">Contact</span></Link>
+        </div>
+
+        {/* Right Side (Desktop Only) */}
+        <div className="hidden lg:flex items-center gap-6">
+          <Link href="#"><span className="text-gray-500 text-sm">Contact support</span></Link>
+          <Link href="#"><span className="text-gray-500 text-sm">My background check</span></Link>
+          <Link href="#"><span className="text-gray-500 text-sm">Log in</span></Link>
+          <button className="bg-[#009BB5] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#0085a0] transition">
+            Sign up
+          </button>
+          <button className="border border-[#009BB5] text-[#009BB5] bg-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition">
+            Talk to sales
+          </button>
+        </div>
+
+        {/* Mobile Menu Toggle */}
+        <div className="lg:hidden">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700 focus:outline-none">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              {isOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
-      {/* Navigation Links */}
-      <div style={{ 
-        display: 'flex', 
-        alignItems: 'center', 
-        gap: '32px' 
-      }}>
-        <a href="#" style={{ 
-          color: '#374151', 
-          textDecoration: 'none', 
-          fontSize: '16px',
-          fontWeight: '500'
-        }}>Products</a>
-        <a href="#" style={{ 
-          color: '#374151', 
-          textDecoration: 'none', 
-          fontSize: '16px',
-          fontWeight: '500'
-        }}>Due Diligence</a>
-        <a href="#" style={{ 
-          color: '#374151', 
-          textDecoration: 'none', 
-          fontSize: '16px',
-          fontWeight: '500'
-        }}>Data Security</a>
-        <a href="#" style={{ 
-          color: '#374151', 
-          textDecoration: 'none', 
-          fontSize: '16px',
-          fontWeight: '500'
-        }}>About JFS</a>
-        <a href="#" style={{ 
-          color: '#374151', 
-          textDecoration: 'none', 
-          fontSize: '16px',
-          fontWeight: '500'
-        }}>Contact</a>
-      </div>
-
-      {/* Right Side Actions */}
-      <div style={{ 
-        display: 'flex', 
-        alignItems: 'center', 
-        gap: '24px' 
-      }}>
-        <a href="#" style={{ 
-          color: '#6b7280', 
-          textDecoration: 'none', 
-          fontSize: '14px' 
-        }}>Contact support</a>
-        <a href="#" style={{ 
-          color: '#6b7280', 
-          textDecoration: 'none', 
-          fontSize: '14px' 
-        }}>My background check</a>
-        <a href="#" style={{ 
-          color: '#6b7280', 
-          textDecoration: 'none', 
-          fontSize: '14px' 
-        }}>Log in</a>
-        
-        <button style={{ 
-          backgroundColor: '#009BB5', 
-          color: 'white', 
-          border: 'none', 
-          padding: '10px 16px', 
-          borderRadius: '6px', 
-          fontSize: '14px',
-          fontWeight: '500',
-          cursor: 'pointer'
-        }}>Sign up</button>
-        
-        <button style={{ 
-          color: '#009BB5', 
-          border: '1px solid #009BB5', 
-          backgroundColor: 'white', 
-          padding: '10px 16px', 
-          borderRadius: '6px', 
-          fontSize: '14px',
-          fontWeight: '500',
-          cursor: 'pointer'
-        }}>Talk to sales</button>
-      </div>
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <div className="lg:hidden mt-4 space-y-4">
+          <Link href="#"><div className="block text-gray-700 text-base font-medium">Products</div></Link>
+          <Link href="#"><div className="block text-gray-700 text-base font-medium">Due Diligence</div></Link>
+          <Link href="#"><div className="block text-gray-700 text-base font-medium">Data Security</div></Link>
+          <Link href="#"><div className="block text-gray-700 text-base font-medium">About JFS</div></Link>
+          <Link href="#"><div className="block text-gray-700 text-base font-medium">Contact</div></Link>
+          <hr />
+          <Link href="#"><div className="block text-gray-500 text-sm">Contact support</div></Link>
+          <Link href="#"><div className="block text-gray-500 text-sm">My background check</div></Link>
+          <Link href="#"><div className="block text-gray-500 text-sm">Log in</div></Link>
+          <button className="w-full bg-[#009BB5] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#0085a0] transition">
+            Sign up
+          </button>
+          <button className="w-full border border-[#009BB5] text-[#009BB5] bg-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition">
+            Talk to sales
+          </button>
+        </div>
+      )}
     </nav>
   );
 }
