@@ -1,2 +1,25 @@
 @import "tailwindcss";
 
+:root {
+  --color-primary: #009BB5;
+  --color-primary-light: rgba(0, 155, 181, 0.1); 
+}
+
+/* .btn-hover {
+    background-color: #ffffff;
+    color: #009BB5;
+}
+.btn-hover:hover {
+    background-color: #009BB5;
+    color: #ffffff
+}
+
+.btn-hover-primary {
+    background-color: var(--color-primary);
+}
+.btn-hover-primary:hover {
+    background-color: #ffffff;
+    color: #009BB5;
+    border: 2px solid #009BB5;
+} */
+
