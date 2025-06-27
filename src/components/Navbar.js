@@ -29,19 +29,37 @@ export default function Navbar() {
       content: [
         {
           category: 'Record Checks',
-          items: ['Address Verification', 'Academic', 'Professional Qualifications', 'Employment', 'Education', 'Identity', 'Driving Qualifications']
+          items: [
+            { name: 'Address Verification', href: '/products/address-verification' },
+            { name: 'Academic', href: '/products/academic' },
+            { name: 'Professional Qualifications', href: '/products/professional-qualifications' },
+            { name: 'Employment', href: '/products/employment' },
+            { name: 'Education', href: '/products/education' },
+            { name: 'Identity', href: '/products/identity' },
+            { name: 'Driving Qualifications', href: '/products/driving-qualifications' }
+          ]
         },
         {
           category: 'Database Checks',
-          items: ['CRIB', 'Anti Money Laundering']
+          items: [
+            { name: 'CRIB', href: '/products/crib' },
+            { name: 'Anti Money Laundering', href: '/products/anti-money-laundering' }
+          ]
         },
         {
           category: 'Criminal Clearance',
-          items: ['Grama Sevaka Clearance', 'Basic Police Clearance', 'Advance Police Clearance']
+          items: [
+            { name: 'Grama Sevaka Clearance', href: '/products/grama-sevaka-clearance' },
+            { name: 'Basic Police Clearance', href: '/products/basic-police-clearance' },
+            { name: 'Advance Police Clearance', href: '/products/advance-police-clearance' }
+          ]
         },
         {
           category: 'Reference Checks',
-          items: ['Referees', 'Character Confirmations']
+          items: [
+            { name: 'Referees', href: '/products/referees' },
+            { name: 'Character Confirmations', href: '/products/character-confirmations' }
+          ]
         }
       ]
     },
@@ -51,15 +69,21 @@ export default function Navbar() {
       content: [
         {
           category: 'Registration',
-          items: ['ROC doc']
+          items: [
+            { name: 'ROC doc', href: '/due-diligence/roc-doc' }
+          ]
         },
         {
           category: 'Taxes',
-          items: ['IRD registrations']
+          items: [
+            { name: 'IRD registrations', href: '/due-diligence/ird-registrations' }
+          ]
         },
         {
           category: 'Compliance',
-          items: ['EPF/ETF registrations']
+          items: [
+            { name: 'EPF/ETF registrations', href: '/due-diligence/epf-etf-registrations' }
+          ]
         }
       ]
     },
@@ -69,7 +93,9 @@ export default function Navbar() {
       content: [
         {
           category: '',
-          items: ['ISO']
+          items: [
+            { name: 'ISO', href: '/data-security/iso' }
+          ]
         }
       ]
     },
@@ -79,13 +105,19 @@ export default function Navbar() {
       content: [
         {
           category: '',
-          items: ['JFS', 'Awards', 'CSR', 'Annual Reports']
+          items: [
+            { name: 'JFS', href: '/about/jfs' },
+            { name: 'Awards', href: '/about/awards' },
+            { name: 'CSR', href: '/about/csr' },
+            { name: 'Annual Reports', href: '/about/annual-reports' }
+          ]
         }
       ]
     },
     {
       title: 'Contact',
-      hasDropdown: false
+      hasDropdown: false,
+      href: '/contact'
     }
   ];
 
@@ -97,16 +129,18 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <div className="flex-shrink-0 transition-transform duration-200 hover:scale-105">
-            <div className="w-36 h-9 sm:w-45 sm:h-12">
-              <Image
-                src="/images/verifieze-logo.png"
-                alt="Verifieze Logo"
-                width={180}
-                height={45}
-                priority
-                className="w-full h-full object-contain"
-              />
-            </div>
+            <Link href="/">
+              <div className="w-36 h-9 sm:w-45 sm:h-12">
+                <Image
+                  src="/images/verifieze-logo.png"
+                  alt="Verifieze Logo"
+                  width={180}
+                  height={45}
+                  priority
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -135,8 +169,8 @@ export default function Navbar() {
                                 <ul className="space-y-2">
                                   {section.items.map((subItem, subIndex) => (
                                     <li key={subIndex}>
-                                      <Link href="#" className="text-sm text-gray-600 hover:text-[#009BB5] transition-colors duration-200 block py-1">
-                                        {subItem}
+                                      <Link href={subItem.href} className="text-sm text-gray-600 hover:text-[#009BB5] transition-colors duration-200 block py-1">
+                                        {subItem.name}
                                       </Link>
                                     </li>
                                   ))}
@@ -154,8 +188,8 @@ export default function Navbar() {
                                 <ul className="space-y-2">
                                   {section.items.map((subItem, subIndex) => (
                                     <li key={subIndex}>
-                                      <Link href="#" className="text-sm text-gray-600 hover:text-[#009BB5] transition-colors duration-200 block py-1">
-                                        {subItem}
+                                      <Link href={subItem.href} className="text-sm text-gray-600 hover:text-[#009BB5] transition-colors duration-200 block py-1">
+                                        {subItem.name}
                                       </Link>
                                     </li>
                                   ))}
@@ -168,7 +202,7 @@ export default function Navbar() {
                     </div>
                   </>
                 ) : (
-                  <Link href="#" className="text-gray-700 hover:text-[#009BB5] transition-colors duration-200 font-medium text-sm">
+                  <Link href={item.href} className="text-gray-700 hover:text-[#009BB5] transition-colors duration-200 font-medium text-sm">
                     {item.title}
                   </Link>
                 )}
@@ -179,24 +213,28 @@ export default function Navbar() {
           {/* Desktop Right Side */}
           <div className="hidden lg:flex items-center space-x-6">
             <div className="flex items-center space-x-4 text-sm">
-              <Link href="#" className="text-gray-500 hover:text-gray-700 transition-colors duration-200">
+              <Link href="/support" className="text-gray-500 hover:text-gray-700 transition-colors duration-200">
                 Support
               </Link>
-              <Link href="#" className="text-gray-500 hover:text-gray-700 transition-colors duration-200">
+              <Link href="/my-check" className="text-gray-500 hover:text-gray-700 transition-colors duration-200">
                 My Check
               </Link>
-              <Link href="#" className="text-gray-500 hover:text-gray-700 transition-colors duration-200">
+              <Link href="/login" className="text-gray-500 hover:text-gray-700 transition-colors duration-200">
                 Log in
               </Link>
             </div>
             
             <div className="flex items-center space-x-3">
-              <button className="bg-[#009BB5] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#0085a0] transition-all duration-200 hover:shadow-md">
-                Sign up
-              </button>
-              <button className="border border-[#009BB5] text-[#009BB5] bg-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#009BB5] hover:text-white transition-all duration-200">
-                Talk to sales
-              </button>
+              <Link href="/signup">
+                <button className="bg-[#009BB5] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#0085a0] transition-all duration-200 hover:shadow-md">
+                  Sign up
+                </button>
+              </Link>
+              <Link href="/talk-to-sales">
+                <button className="border border-[#009BB5] text-[#009BB5] bg-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#009BB5] hover:text-white transition-all duration-200">
+                  Talk to sales
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -259,10 +297,10 @@ export default function Navbar() {
                               {section.items.map((subItem, subIndex) => (
                                 <Link
                                   key={subIndex}
-                                  href="#"
+                                  href={subItem.href}
                                   className="block px-4 py-3 text-sm text-gray-600 hover:text-[#009BB5] hover:bg-gray-50 rounded-lg transition-all duration-200 touch-manipulation"
                                 >
-                                  {subItem}
+                                  {subItem.name}
                                 </Link>
                               ))}
                             </div>
@@ -273,7 +311,7 @@ export default function Navbar() {
                   </div>
                 ) : (
                   <Link 
-                    href="#" 
+                    href={item.href} 
                     className="block px-4 py-4 text-base text-gray-700 hover:text-[#009BB5] hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium touch-manipulation"
                   >
                     {item.title}
@@ -284,24 +322,28 @@ export default function Navbar() {
             
             {/* Mobile Secondary Links */}
             <div className="pt-4 mt-4 border-t border-gray-100 space-y-2">
-              <Link href="#" className="block px-4 py-3 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-200 touch-manipulation">
+              <Link href="/support" className="block px-4 py-3 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-200 touch-manipulation">
                 Support
               </Link>
-              <Link href="#" className="block px-4 py-3 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-200 touch-manipulation">
+              <Link href="/my-check" className="block px-4 py-3 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-200 touch-manipulation">
                 My Check
               </Link>
-              <Link href="#" className="block px-4 py-3 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-200 touch-manipulation">
+              <Link href="/login" className="block px-4 py-3 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-200 touch-manipulation">
                 Log in
               </Link>
               
               {/* Mobile CTA Buttons */}
               <div className="pt-4 space-y-3 px-4">
-                <button className="w-full bg-[#009BB5] text-white px-6 py-4 rounded-lg text-base font-medium hover:bg-[#0085a0] transition-all duration-200 touch-manipulation shadow-sm">
-                  Sign up
-                </button>
-                <button className="w-full border-2 border-[#009BB5] text-[#009BB5] bg-white px-6 py-4 rounded-lg text-base font-medium hover:bg-[#009BB5] hover:text-white transition-all duration-200 touch-manipulation">
-                  Talk to sales
-                </button>
+                <Link href="/signup">
+                  <button className="w-full bg-[#009BB5] text-white px-6 py-4 rounded-lg text-base font-medium hover:bg-[#0085a0] transition-all duration-200 touch-manipulation shadow-sm">
+                    Sign up
+                  </button>
+                </Link>
+                <Link href="/talk-to-sales">
+                  <button className="w-full border-2 border-[#009BB5] text-[#009BB5] bg-white px-6 py-4 rounded-lg text-base font-medium hover:bg-[#009BB5] hover:text-white transition-all duration-200 touch-manipulation">
+                    Talk to sales
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
