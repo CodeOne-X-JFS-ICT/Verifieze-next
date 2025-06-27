@@ -1,2 +1,40 @@
 @import "tailwindcss";
 
+:root {
+  --color-primary: #009BB5;
+  --color-primary-light: #E0F7FB; 
+  --color-primary-dark: #006F86;
+
+  
+  --color-accent: #F59E0B; /* (attention/alerts) */
+  --color-accent-light: #FFF7E6; /* Backgrounds for accent context */
+
+
+  --color-success: #22C55E;
+  --color-warning: #EF4444;
+
+
+  --color-heading: #111827;
+  --color-text: #4B5563;
+  --color-border: #E5E7EB;
+  --color-bg-light: #F9FAFB;
+}
+
+/* .btn-hover {
+    background-color: #ffffff;
+    color: #009BB5;
+}
+.btn-hover:hover {
+    background-color: #009BB5;
+    color: #ffffff
+}
+
+.btn-hover-primary {
+    background-color: var(--color-primary);
+}
+.btn-hover-primary:hover {
+    background-color: #ffffff;
+    color: #009BB5;
+    border: 2px solid #009BB5;
+} */
+
