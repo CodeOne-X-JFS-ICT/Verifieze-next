@@ -222,7 +222,7 @@ function AddressVelificationPage() {
             <div className="lg:w-1/2">
               <div className="relative rounded-xl overflow-hidden shadow-lg">
                 <Image
-                  src=""
+                  src="/images/Address Checks.jpg"
                   alt="Address verification importance"
                   width={600}
                   height={400}
@@ -243,7 +243,7 @@ function AddressVelificationPage() {
             <div className="lg:w-1/2">
               <div className="relative rounded-xl overflow-hidden shadow-lg">
                 <Image
-                  src=""
+                  src="/images/Address Checks.jpg"
                   alt="Address verification importance"
                   width={600}
                   height={400}
