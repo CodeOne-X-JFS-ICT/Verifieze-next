@@ -97,12 +97,12 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <div className="flex-shrink-0 transition-transform duration-200 hover:scale-105">
-            <div className="w-20 h-5 sm:w-24 sm:h-6">
+            <div className="w-36 h-9 sm:w-45 sm:h-12">
               <Image
                 src="/images/verifieze-logo.png"
                 alt="Verifieze Logo"
-                width={96}
-                height={24}
+                width={180}
+                height={45}
                 priority
                 className="w-full h-full object-contain"
               />
