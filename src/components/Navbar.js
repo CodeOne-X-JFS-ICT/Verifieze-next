@@ -30,8 +30,8 @@ export default function Navbar() {
         {
           category: 'Record Checks',
           items: [
-            { name: 'Address Verification', href: 'record-checks/address-verification' },
-            { name: 'Academic', href: '/products/academic' },
+            { name: 'Address Verification', href: '/record-checks/address-verification' }, 
+            { name: 'Academic', href: '/record-checks/academic' }, 
             { name: 'Professional Qualifications', href: '/products/professional-qualifications' },
             { name: 'Employment', href: '/products/employment' },
             { name: 'Education', href: '/products/education' },
