@@ -1,3 +1,4 @@
+"use client";
 import Navbar from "@/components/Navbar";
 import {
   BadgeCheck,
@@ -17,6 +18,9 @@ import React from "react";
 import Image from "next/image";
 import CTA_Buttons from "@/components/CTA_Buttons";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { containerVariants } from "@/animations/variants";
+import FeatureCard from "@/components/FeatureCard";
 
 function AddressVelificationPage() {
   return (
@@ -57,7 +61,12 @@ function AddressVelificationPage() {
 
           {/* Action buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <CTA_Buttons />
+            <CTA_Buttons
+              primaryText="Get Started"
+              primaryHref=""
+              secondaryText="Takl to Sales"
+              secondaryHref=""
+            />
           </div>
         </div>
       </section>
@@ -81,55 +90,41 @@ function AddressVelificationPage() {
           </div>
 
           {/* Use Cases Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
             {/* Identity Verification */}
-            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-all">
-              <div className="w-12 h-12 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-4">
-                <Fingerprint className="w-6 h-6 text-[var(--color-primary)]" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Identity Verification
-              </h3>
-              <p className="text-gray-600">
-                Confirm the authenticity of provided addresses against
-                government databases.
-              </p>
-            </div>
+            <FeatureCard
+              icon={Fingerprint}
+              title="Identity Verification"
+              description="Confirm the authenticity of provided addresses against government databases."
+            />
 
             {/* Fraud Prevention */}
-            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-all">
-              <div className="w-12 h-12 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-4">
-                <ShieldCheck className="w-6 h-6 text-[var(--color-primary)]" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Fraud Prevention</h3>
-              <p className="text-gray-600">
-                Detect synthetic identities or fake addresses used for
-                fraudulent applications.
-              </p>
-            </div>
+            <FeatureCard
+              icon={ShieldCheck}
+              title="Fraud Prevention"
+              description="Detect synthetic identities or fake addresses used for fraudulent applications."
+            />
 
             {/* Background Checks */}
-            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-all">
-              <div className="w-12 h-12 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-4">
-                <FileSearch className="w-6 h-6 text-[var(--color-primary)]" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Background Checks</h3>
-              <p className="text-gray-600">
-                Validate residential history for employment or tenant screening.
-              </p>
-            </div>
+            <FeatureCard
+              icon={FileSearch}
+              title="Background Checks"
+              description="Validate residential history for employment or tenant screening."
+            />
 
             {/* KYC Compliance */}
-            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-all">
-              <div className="w-12 h-12 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-4">
-                <BadgeCheck className="w-6 h-6 text-[var(--color-primary)]" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">KYC Compliance</h3>
-              <p className="text-gray-600">
-                Meet financial regulations by verifying customer addresses.
-              </p>
-            </div>
-          </div>
+            <FeatureCard
+              icon={BadgeCheck}
+              title="KYC Compliance"
+              description="Meet financial regulations by verifying customer addresses."
+            />
+          </motion.div>
         </div>
       </section>
 
@@ -215,7 +210,12 @@ function AddressVelificationPage() {
 
               {/* Action buttons */}
               <div className="flex mt-8 justify-center gap-4">
-                <CTA_Buttons />
+                <CTA_Buttons
+                  primaryText="Get Started"
+                  primaryHref=""
+                  secondaryText="Takl to Sales"
+                  secondaryHref=""
+                />
               </div>
             </div>
 
@@ -357,28 +357,21 @@ function AddressVelificationPage() {
               Ready to Streamline Your Address Verification?
             </h2>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-              Start verifying residential, business, and utility addresses with ease and confidence using Verifieze.
+              Start verifying residential, business, and utility addresses with
+              ease and confidence using Verifieze.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link
-                href="/signup"
-                className="px-8 py-4 bg-[var(--color-primary)] hover:bg-white hover:text-[var(--color-primary)] border-2 border-transparent hover:border-[var(--color-primary)] text-white font-semibold rounded-lg shadow-lg transition-all duration-300 text-center"
-              >
-                Start Now
-              </Link>
-              <Link
-                href="/demo"
-                className="px-8 py-4 bg-white text-[var(--color-primary)] border-2 border-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white font-semibold rounded-lg shadow-lg transition-all duration-300 text-center"
-              >
-                Request Live Demo
-              </Link>
+              <CTA_Buttons
+                primaryText="Start Now"
+                primaryHref=""
+                secondaryText="Request Live Demo"
+                secondaryHref=""
+              />
             </div>
           </div>
         </div>
       </section>
-
-      
     </>
   );
 }
