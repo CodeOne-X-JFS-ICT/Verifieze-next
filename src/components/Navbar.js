@@ -32,7 +32,7 @@ export default function Navbar() {
           items: [
             { name: 'Address Verification', href: '/record-checks/address-verification' }, 
             { name: 'Academic', href: '/record-checks/academic' }, 
-            { name: 'Professional Qualifications', href: '/products/professional-qualifications' },
+            { name: 'Professional Qualifications', href: '/record-checks/professional-qualifications' },
             { name: 'Employment', href: '/products/employment' },
             { name: 'Education', href: '/products/education' },
             { name: 'Identity', href: '/products/identity' },
