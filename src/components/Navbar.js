@@ -34,7 +34,7 @@ export default function Navbar() {
             { name: 'Academic', href: '/record-checks/academic' }, 
             { name: 'Professional Qualifications', href: '/record-checks/professional-qualifications' },
             { name: 'Employment', href: '/products/employment' },
-            { name: 'Education', href: '/products/education' },
+            { name: 'Education', href: '/record-checks/education' },
             { name: 'Identity', href: '/products/identity' },
             { name: 'Driving Qualifications', href: '/products/driving-qualifications' }
           ]
