@@ -33,10 +33,10 @@ export default function Navbar() {
             { name: 'Address Verification', href: '/record-checks/address-verification' }, 
             { name: 'Academic', href: '/record-checks/academic' }, 
             { name: 'Professional Qualifications', href: '/record-checks/professional-qualifications' },
-            { name: 'Employment', href: '/products/employment' },
+            { name: 'Employment', href: '/record-checks/employment' },
             { name: 'Education', href: '/record-checks/education' },
-            { name: 'Identity', href: '/products/identity' },
-            { name: 'Driving Qualifications', href: '/products/driving-qualifications' }
+            { name: 'Identity', href: '/record-checks/identity' },
+            { name: 'Driving Qualifications', href: '/record-checks/driving-qualifications' }
           ]
         },
         {
