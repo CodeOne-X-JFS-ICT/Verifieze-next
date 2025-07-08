@@ -36,7 +36,7 @@ export default function Navbar() {
             { name: 'Employment', href: '/record-checks/employment' },
             { name: 'Education', href: '/products/education' },
             { name: 'Identity', href: '/record-checks/identity' },
-            { name: 'Driving Qualifications', href: '/products/driving-qualifications' }
+            { name: 'Driving Qualifications', href: '/record-checks/driving-qualifications' }
           ]
         },
         {
