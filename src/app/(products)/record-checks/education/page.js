@@ -198,7 +198,7 @@ function EducationVerificationPage() {
             <div className="lg:w-1/2">
               <div className="relative rounded-xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/education-verification.jpg"
+                  src="/images/Education-Verification.png"
                   alt="Education verification process"
                   width={600}
                   height={400}

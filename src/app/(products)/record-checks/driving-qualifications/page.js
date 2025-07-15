@@ -183,7 +183,7 @@ function DrivingQualification() {
 
       <ImageContainer
         reverse={false}
-        imageSrc="/images/"
+        imageSrc="/images/Driving-qualification.png"
         imageAlt="Driving Qualification illustration"
         title="Key Benefits of Driving Qualification Checks"
         highlightText=""

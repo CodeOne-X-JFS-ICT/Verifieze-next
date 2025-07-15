@@ -42,8 +42,8 @@ export default function Navbar() {
         {
           category: 'Database Checks',
           items: [
-            { name: 'CRIB', href: '/products/crib' },
-            { name: 'Anti Money Laundering', href: '/products/anti-money-laundering' }
+            { name: 'CRIB', href: '/database-checks/crib' },
+            { name: 'Anti Money Laundering', href: '/database-checks/anti-money-laundering' }
           ]
         },
         {
@@ -107,7 +107,7 @@ export default function Navbar() {
           category: '',
           items: [
             { name: 'JFS', href: '/JFS' },
-            { name: 'Awards', href: '/about/awards' },
+            { name: 'Awards', href: '/awards' },
             { name: 'CSR', href: '/about/csr' },
             { name: 'Annual Reports', href: '/about/annual-reports' }
           ]

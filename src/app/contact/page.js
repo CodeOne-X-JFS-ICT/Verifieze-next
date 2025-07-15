@@ -143,10 +143,10 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="relative bg-[color:var(--color-primary-light)] overflow-hidden">
         <div
-          className="absolute inset-0 bg-[url('/images/map.jpg')] bg-cover bg-center opacity-10"
+          className="absolute inset-0 bg-[url('/images/Contact-3.jpg')] bg-cover bg-center opacity-10"
           aria-hidden="true"
         >
-          <div className="absolute inset-0 bg-[var(--color-primary)] opacity-30"></div>
+          <div className="absolute inset-0 bg-[var(--color-primary)] opacity-10"></div>
         </div>
 
         <div className="container mx-auto px-4 py-20 md:py-28 lg:py-32 text-center relative z-10">
