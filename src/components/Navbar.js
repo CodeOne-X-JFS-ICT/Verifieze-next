@@ -106,7 +106,7 @@ export default function Navbar() {
         {
           category: '',
           items: [
-            { name: 'JFS', href: '/about/jfs' },
+            { name: 'JFS', href: '/JFS' },
             { name: 'Awards', href: '/about/awards' },
             { name: 'CSR', href: '/about/csr' },
             { name: 'Annual Reports', href: '/about/annual-reports' }
