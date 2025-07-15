@@ -158,7 +158,7 @@ function EmploymentVerificationPage() {
 
       <ImageContainer
         reverse={false}
-        imageSrc="/images/map.jpg"
+        imageSrc="/images/Employment-1.jpg"
         imageAlt="Employment verification illustration"
         title="What We"
         highlightText="Verify"

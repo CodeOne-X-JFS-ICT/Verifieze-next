@@ -130,7 +130,7 @@ const checkItems = [
               <div className="absolute inset-0 bg-[var(--color-primary-light)] rounded-2xl transform rotate-6"></div>
               <div className="relative bg-white rounded-2xl border border-gray-200 p-8 shadow-sm h-full flex items-center">
                 <Image
-                  src="/images/"
+                  src="/images/CRIB.png"
                   alt="Financial Report"
                   fill
                   className="object-contain p-8"

@@ -37,7 +37,7 @@ function AboutJFSPage() {
       {/* Hero section */}
       <section className="relative bg-[color:var(--color-primary-light)] overflow-hidden">
         <div
-          className="absolute inset-0 bg-[url('/images/corporate-building.jpg')] bg-cover bg-center opacity-20"
+          className="absolute inset-0 bg-[url('/images/Employment-2.jpg')] bg-cover bg-center opacity-20"
           aria-hidden="true"
         >
           <div className="absolute inset-0 bg-[var(--color-primary)] opacity-20"></div>
@@ -218,7 +218,7 @@ function AboutJFSPage() {
             <div className="lg:w-1/2">
               <div className="relative rounded-xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/jfs-team.jpg"
+                  src="/images/About.png"
                   alt="JFS Holdings team and vision"
                   width={600}
                   height={400}
@@ -238,7 +238,7 @@ function AboutJFSPage() {
             <div className="lg:w-1/2">
               <div className="relative rounded-xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/business-portfolio.jpg"
+                  src="/images/About.png"
                   alt="JFS Holdings business portfolio"
                   width={600}
                   height={400}
