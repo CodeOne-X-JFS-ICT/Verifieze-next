@@ -42,8 +42,8 @@ export default function Navbar() {
         {
           category: 'Database Checks',
           items: [
-            { name: 'CRIB', href: '/products/crib' },
-            { name: 'Anti Money Laundering', href: '/products/anti-money-laundering' }
+            { name: 'CRIB', href: '/database-checks/crib' },
+            { name: 'Anti Money Laundering', href: '/database-checks/anti-money-laundering' }
           ]
         },
         {
