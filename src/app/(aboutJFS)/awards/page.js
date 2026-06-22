@@ -1,259 +1,507 @@
-import React from 'react';
-import { Award, Star, Shield, Users, Trophy, CheckCircle, Calendar, MapPin } from 'lucide-react';
-import Navbar from '@/components/Navbar';
+"use client";
+import Navbar from "@/components/Navbar";
+import {
+  Award,
+  Trophy,
+  Medal,
+  Star,
+  Crown,
+  Shield,
+  Target,
+  TrendingUp,
+  Calendar,
+  CheckCircle,
+  Sparkles,
+  Globe,
+} from "lucide-react";
 
-const AwardsPage = () => {
-  const majorAwards = [
+import React from "react";
+import CTA_Buttons from "@/components/CTA_Buttons";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { containerVariants } from "@/animations/variants";
+import FeatureCard from "@/components/FeatureCard";
+
+function AwardsRecognitionPage() {
+  const awards = [
     {
-      title: "Best Background Check Platform 2024",
-      organization: "HR Tech Awards",
       year: "2024",
-      description: "Recognized for exceptional innovation in employee verification technology and customer satisfaction.",
-      icon: <Trophy className="w-8 h-8" />,
-      category: "Industry Recognition"
+      title: "National Gold Award",
+      organization: "CNCI Achiever Awards 2024",
+      description: "JFS Holdings won the National Gold Award at the CNCI Achiever Awards 2024, recognizing excellence in operations and innovation.",
+      type: "Gold",
+      icon: Crown
     },
     {
-      title: "Cybersecurity Excellence Award",
-      organization: "Security Innovation Institute",
-      year: "2024",
-      description: "Awarded for outstanding data protection and security measures in background verification services.",
-      icon: <Shield className="w-8 h-8" />,
-      category: "Security & Compliance"
-    },
-    {
-      title: "Customer Choice Award",
-      organization: "B2B Review Platform",
       year: "2023",
-      description: "Highest customer satisfaction rating among background check providers with 98% approval rate.",
-      icon: <Star className="w-8 h-8" />,
-      category: "Customer Excellence"
+      title: "Certificate of Compliance",
+      organization: "TAGS Awards 2023",
+      description: "Our Annual Report 'The STARGATE' 2022/23 earned a Certificate of Compliance at the TAGS Awards on Dec 12, 2023, for transparency and reporting standards.",
+      type: "Certificate",
+      icon: CheckCircle
+    },
+    {
+      year: "2023",
+      title: "Silver Award",
+      organization: "31st National Export Awards 2023",
+      description: "Received the Silver Award in the Export Services category at the 31st NCE Awards on December 8, 2023.",
+      type: "Silver",
+      icon: Medal
+    },
+    {
+      year: "2023",
+      title: "Merit Award",
+      organization: "09th CMA Awards 2023",
+      description: "'The STARGATE' 2022/23 Annual Report received a Merit Award at the 09th CMA Reporting Awards on Oct 6, 2023.",
+      type: "Merit",
+      icon: Star
+    },
+    {
+      year: "2023",
+      title: "National Gold Award",
+      organization: "CNCI Achiever Awards 2023",
+      description: "Awarded National Gold on Oct 18, 2023, at the CNCI Achiever Awards for business excellence and sustainability.",
+      type: "Gold",
+      icon: Crown
+    },
+    {
+      year: "2022",
+      title: "Certificate of Compliance",
+      organization: "TAGS Awards 2022",
+      description: "Our 'BILLION RUN' 2021/22 Annual Report received a Certificate of Compliance at the TAGS Awards on Dec 6, 2022.",
+      type: "Certificate",
+      icon: CheckCircle
+    },
+    {
+      year: "2022",
+      title: "Silver Award",
+      organization: "30th National Export Awards 2022",
+      description: "Won Silver in the Export Services category at the 30th NCE Export Awards on December 2, 2022.",
+      type: "Silver",
+      icon: Medal
+    },
+    {
+      year: "2022",
+      title: "National Silver Award",
+      organization: "CNCI Achiever Awards 2022",
+      description: "Earned National Silver at CNCI Achiever Awards 2022 on Dec 22 for strong performance during tough times.",
+      type: "Silver",
+      icon: Medal
+    },
+    {
+      year: "2021",
+      title: "National Merit Award",
+      organization: "20th CNCI Achiever Awards 2021",
+      description: "Received a National Merit Award on January 12, 2022, marking a key early achievement in our growth journey.",
+      type: "Merit",
+      icon: Star
     }
   ];
 
-  const certifications = [
-    {
-      title: "SOC 2 Type II Certified",
-      issuer: "AICPA",
-      year: "2024",
-      description: "Demonstrates our commitment to security, availability, and confidentiality of customer data."
-    },
-    {
-      title: "FCRA Compliance Certification",
-      issuer: "Fair Credit Reporting Act",
-      year: "2024",
-      description: "Certified compliance with federal regulations for background screening services."
-    },
-    {
-      title: "ISO 27001 Certified",
-      issuer: "International Organization for Standardization",
-      year: "2023",
-      description: "International standard for information security management systems."
-    },
-    {
-      title: "PBSA Accreditation",
-      issuer: "Professional Background Screening Association",
-      year: "2023",
-      description: "Accredited member ensuring industry best practices and ethical standards."
+  const getAwardTypeColor = (type) => {
+    switch (type) {
+      case "Gold":
+        return "bg-yellow-50 border-yellow-200";
+      case "Silver":
+        return "bg-gray-50 border-gray-200";
+      case "Certificate":
+        return "bg-blue-50 border-blue-200";
+      case "Merit":
+        return "bg-purple-50 border-purple-200";
+      default:
+        return "bg-gray-50 border-gray-200";
     }
-  ];
+  };
 
-  const industryRecognition = [
-    {
-      title: "Featured in Forbes",
-      date: "March 2024",
-      description: "\"Top 10 Background Check Platforms Revolutionizing HR\"",
-      type: "Media Coverage"
-    },
-    {
-      title: "TechCrunch Spotlight",
-      date: "January 2024",
-      description: "Highlighted as an innovative solution for modern hiring challenges",
-      type: "Media Coverage"
-    },
-    {
-      title: "HR Executive Top Pick",
-      date: "December 2023",
-      description: "Recommended as essential tool for HR professionals",
-      type: "Industry Publication"
-    },
-    {
-      title: "G2 High Performer",
-      date: "Ongoing",
-      description: "Consistently rated as high performer in background check category",
-      type: "Review Platform"
+  const getIconColor = (type) => {
+    switch (type) {
+      case "Gold":
+        return "text-yellow-600";
+      case "Silver":
+        return "text-gray-600";
+      case "Certificate":
+        return "text-blue-600";
+      case "Merit":
+        return "text-purple-600";
+      default:
+        return "text-gray-600";
     }
-  ];
+  };
 
   return (
     <>
-    <Navbar />
+      <Navbar />
 
-     <div className="min-h-screen bg-white relative py-20">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-[#009BB5] to-[#006F86] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <Award className="w-16 h-16 mx-auto mb-6 text-white" />
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Awards & Recognition
-            </h1>
-            <p className="text-xl text-[#E0F7FB] max-w-3xl mx-auto">
-              Trusted by thousands of companies worldwide, Verifieze has been recognized for excellence in background verification, security, and customer service.
-            </p>
-          </div>
-        </div>
-      </div>
+      {/* Hero section */}
+      <section className="relative bg-[color:var(--color-primary-light)] overflow-hidden">
+        <div className="container mx-auto px-4 py-20 md:py-28 lg:py-32 text-center relative z-10">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            Awards &{" "}
+            <span className="text-[var(--color-primary)]">
+              Recognition
+            </span>
+          </h1>
 
-      {/* Stats Section */}
-      <div className="py-16 bg-[#F9FAFB]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#009BB5] mb-2">15+</div>
-              <div className="text-[#4B5563]">Industry Awards</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#009BB5] mb-2">98%</div>
-              <div className="text-[#4B5563]">Customer Satisfaction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#009BB5] mb-2">50K+</div>
-              <div className="text-[#4B5563]">Verified Employees</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#009BB5] mb-2">99.9%</div>
-              <div className="text-[#4B5563]">Platform Uptime</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+          <p className="text-xl mb-8 text-gray-600 max-w-3xl mx-auto">
+            Celebrating excellence, innovation, and industry leadership. Our awards reflect our commitment 
+            to delivering outstanding value and maintaining the highest standards across all business operations.
+          </p>
 
-      {/* Major Awards */}
-      <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#111827] mb-4">Major Awards</h2>
-            <p className="text-lg text-[#4B5563] max-w-3xl mx-auto">
-              Our commitment to excellence has been recognized by leading industry organizations and publications.
-            </p>
-          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {majorAwards.map((award, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg border border-[#E5E7EB] p-8 hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center mb-6">
-                  <div className="text-[#009BB5] mr-4">
-                    {award.icon}
-                  </div>
-                  <div>
-                    <span className="text-sm font-medium text-[#F59E0B] bg-[#FFF7E6] px-3 py-1 rounded-full">
-                      {award.category}
-                    </span>
-                  </div>
-                </div>
-                
-                <h3 className="text-xl font-bold text-[#111827] mb-2">{award.title}</h3>
-                <p className="text-[#009BB5] font-semibold mb-1">{award.organization}</p>
-                <p className="text-sm text-[#4B5563] mb-4">{award.year}</p>
-                <p className="text-[#4B5563] leading-relaxed">{award.description}</p>
-              </div>
-            ))}
-          </div>
         </div>
-      </div>
+      </section>
 
-      {/* Certifications */}
-      <div className="py-20 bg-[#F9FAFB]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#111827] mb-4">Certifications & Compliance</h2>
-            <p className="text-lg text-[#4B5563] max-w-3xl mx-auto">
-              We maintain the highest standards of security, compliance, and professional excellence.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {certifications.map((cert, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-md border border-[#E5E7EB] p-6 hover:shadow-lg transition-shadow duration-300">
-                <div className="flex items-center mb-4">
-                  <CheckCircle className="w-6 h-6 text-[#24b95b] mr-3" />
-                  <span className="text-sm font-medium text-[#24b95b]">{cert.year}</span>
-                </div>
-                <h3 className="text-lg font-bold text-[#111827] mb-2">{cert.title}</h3>
-                <p className="text-sm text-[#009BB5] font-semibold mb-3">{cert.issuer}</p>
-                <p className="text-sm text-[#4B5563] leading-relaxed">{cert.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Industry Recognition */}
-      <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#111827] mb-4">Industry Recognition</h2>
-            <p className="text-lg text-[#4B5563] max-w-3xl mx-auto">
-              Featured in leading publications and recognized by industry experts for innovation and excellence.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {industryRecognition.map((recognition, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-md border border-[#E5E7EB] p-6 hover:shadow-lg transition-shadow duration-300">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center">
-                    <Star className="w-5 h-5 text-[#F59E0B] mr-2" />
-                    <span className="text-sm font-medium text-[#F59E0B] bg-[#FFF7E6] px-3 py-1 rounded-full">
-                      {recognition.type}
-                    </span>
-                  </div>
-                  <div className="flex items-center text-sm text-[#4B5563]">
-                    <Calendar className="w-4 h-4 mr-1" />
-                    {recognition.date}
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-[#111827] mb-2">{recognition.title}</h3>
-                <p className="text-[#4B5563] leading-relaxed">{recognition.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Trust Section */}
-      <div className="py-20 bg-gradient-to-r from-[#009BB5] to-[#006F86]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <Shield className="w-16 h-16 mx-auto mb-6 text-white" />
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Trusted by Leading Companies
+      {/* Awards Statistics Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          {/* Section Header */}
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Recognition{" "}
+              <span className="text-[var(--color-primary)]">
+                at a Glance
+              </span>
             </h2>
-            <p className="text-xl text-[#E0F7FB] mb-8 max-w-3xl mx-auto">
-              Our awards and certifications reflect our unwavering commitment to providing secure, reliable, and accurate background verification services.
-            </p> 
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-3">
-                <span className="text-gray-600 font-medium">Fortune 500 Companies</span>
+            <p className="text-lg text-gray-600">
+              Our track record of excellence spans multiple years and various categories, 
+              demonstrating consistent performance and industry leadership.
+            </p>
+          </div>
+
+          {/* Statistics Grid */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            {/* Total Awards */}
+            <FeatureCard
+              icon={Trophy}
+              title="10+ Awards"
+              description="Total awards received across multiple categories and organizations since 2021."
+            />
+
+            {/* Gold Awards */}
+            <FeatureCard
+              icon={Crown}
+              title="3 Gold Awards"
+              description="National Gold Awards from CNCI Achiever Awards recognizing our excellence."
+            />
+
+            {/* Export Recognition */}
+            <FeatureCard
+              icon={Globe}
+              title="Export Excellence"
+              description="Multiple Silver Awards in Export Services category at National Export Awards."
+            />
+
+            {/* Reporting Standards */}
+            <FeatureCard
+              icon={Shield}
+              title="Compliance Certified"
+              description="Certificates of Compliance for our annual reports demonstrating transparency."
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Awards Timeline Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our{" "}
+                <span className="text-[var(--color-primary)]">
+                  Award Journey
+                </span>
+              </h2>
+              <p className="text-lg text-gray-600">
+                A comprehensive timeline of our achievements and recognition over the years.
+              </p>
+            </div>
+
+            {/* Awards Grid */}
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              {awards.map((award, index) => {
+                const IconComponent = award.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className={`p-6 rounded-xl border-2 ${getAwardTypeColor(award.type)} hover:shadow-lg transition-shadow duration-300`}
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className={`p-2 rounded-full bg-white`}>
+                        <IconComponent className={`w-6 h-6 ${getIconColor(award.type)}`} />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getIconColor(award.type)} bg-white`}>
+                            {award.year}
+                          </span>
+                          <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getIconColor(award.type)} bg-white`}>
+                            {award.type}
+                          </span>
+                        </div>
+                        <h3 className="text-lg font-bold text-gray-900 mb-1">
+                          {award.title}
+                        </h3>
+                        <p className={`text-sm font-medium ${getIconColor(award.type)} mb-3`}>
+                          {award.organization}
+                        </p>
+                        <p className="text-gray-600 text-sm leading-relaxed">
+                          {award.description}
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Award Categories Section - Restructured */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Excellence Across{" "}
+                <span className="text-[var(--color-primary)]">
+                  Multiple Categories
+                </span>
+              </h2>
+
+              <p className="text-lg text-gray-600 mb-8">
+                Our awards span various categories, reflecting our comprehensive approach to business 
+                excellence and our commitment to setting industry standards.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Business Excellence */}
+              <div className="text-center p-6 bg-gray-50 rounded-xl">
+                <div className="bg-[var(--color-primary-light)] p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Trophy className="w-8 h-8 text-[var(--color-primary)]" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">
+                  Business Excellence & Innovation
+                </h3>
+                <p className="text-gray-600">
+                  Multiple National Gold Awards from CNCI Achiever Awards recognizing our 
+                  operational excellence and innovative business practices.
+                </p>
               </div>
-              <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-3">
-                <span className="text-gray-600 font-medium">Healthcare Organizations</span>
+
+              {/* Export Services */}
+              <div className="text-center p-6 bg-gray-50 rounded-xl">
+                <div className="bg-[var(--color-primary-light)] p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Globe className="w-8 h-8 text-[var(--color-primary)]" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">
+                  Export Services Excellence
+                </h3>
+                <p className="text-gray-600">
+                  Consistent recognition in Export Services category at National Export Awards, 
+                  highlighting our global business capabilities.
+                </p>
               </div>
-              <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-3">
-                <span className="text-gray-600 font-medium">Financial Institutions</span>
-              </div>
-              <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-3">
-                <span className="text-gray-600 font-medium">Government Agencies</span>
+
+              {/* Reporting Standards */}
+              <div className="text-center p-6 bg-gray-50 rounded-xl">
+                <div className="bg-[var(--color-primary-light)] p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-8 h-8 text-[var(--color-primary)]" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">
+                  Transparency & Reporting
+                </h3>
+                <p className="text-gray-600">
+                  Certificates of Compliance for our annual reports "The STARGATE" and 
+                  "BILLION RUN," demonstrating our commitment to transparency.
+                </p>
               </div>
             </div>
-          </div> 
+          </div>
         </div>
-      </div>
-    </div>
-    </>
-   
-  ); 
-};
+      </section>
 
-export default AwardsPage;
+      {/* Recognition Impact Section - Restructured */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                What Our{" "}
+                <span className="text-[var(--color-primary)]">
+                  Awards Mean
+                </span>
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Industry Leadership */}
+              <div className="flex items-start gap-4 p-6 bg-white rounded-xl">
+                <div className="bg-[var(--color-primary-light)] p-3 rounded-full flex-shrink-0">
+                  <Crown className="w-6 h-6 text-[var(--color-primary)]" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">
+                    Industry Leadership
+                  </h3>
+                  <p className="text-gray-600">
+                    Our awards validate our position as a leader in the Sri Lankan business 
+                    landscape and our commitment to setting industry benchmarks.
+                  </p>
+                </div>
+              </div>
+
+              {/* Quality Assurance */}
+              <div className="flex items-start gap-4 p-6 bg-white rounded-xl">
+                <div className="bg-[var(--color-primary-light)] p-3 rounded-full flex-shrink-0">
+                  <Shield className="w-6 h-6 text-[var(--color-primary)]" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">
+                    Quality Assurance
+                  </h3>
+                  <p className="text-gray-600">
+                    Recognition from prestigious organizations confirms our dedication to 
+                    maintaining the highest quality standards across all operations.
+                  </p>
+                </div>
+              </div>
+
+              {/* Client Confidence */}
+              <div className="flex items-start gap-4 p-6 bg-white rounded-xl">
+                <div className="bg-[var(--color-primary-light)] p-3 rounded-full flex-shrink-0">
+                  <Target className="w-6 h-6 text-[var(--color-primary)]" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">
+                    Client Confidence
+                  </h3>
+                  <p className="text-gray-600">
+                    These accolades provide our clients and partners with confidence in our 
+                    capabilities and commitment to excellence.
+                  </p>
+                </div>
+              </div>
+
+              {/* Growth Trajectory */}
+              <div className="flex items-start gap-4 p-6 bg-white rounded-xl">
+                <div className="bg-[var(--color-primary-light)] p-3 rounded-full flex-shrink-0">
+                  <TrendingUp className="w-6 h-6 text-[var(--color-primary)]" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">
+                    Sustainable Growth
+                  </h3>
+                  <p className="text-gray-600">
+                    The consistency of our awards demonstrates our sustainable growth model 
+                    and long-term business strategy effectiveness.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Action buttons */}
+            <div className="flex mt-12 justify-center gap-4">
+              <CTA_Buttons
+                primaryText="Learn More About Us"
+                primaryHref=""
+                secondaryText="Partnership Opportunities"
+                secondaryHref=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Future Goals Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Continuing Our{" "}
+              <span className="text-[var(--color-primary)]">
+                Journey of Excellence
+              </span>
+            </h2>
+            <p className="text-lg text-gray-600 mb-8">
+              Our awards history motivates us to continue pushing boundaries, setting new standards, 
+              and achieving even greater recognition as we work towards our vision of becoming 
+              Sri Lanka's largest conglomerate by 2040.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              {/* Innovation Focus */}
+              <div className="text-center">
+                <div className="bg-[var(--color-primary-light)] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Sparkles className="w-8 h-8 text-[var(--color-primary)]" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Innovation</h3>
+                <p className="text-gray-600">Continuing to innovate and set new industry benchmarks</p>
+              </div>
+
+              {/* Excellence */}
+              <div className="text-center">
+                <div className="bg-[var(--color-primary-light)] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-8 h-8 text-[var(--color-primary)]" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Excellence</h3>
+                <p className="text-gray-600">Maintaining the highest standards across all business operations</p>
+              </div>
+
+              {/* Recognition */}
+              <div className="text-center">
+                <div className="bg-[var(--color-primary-light)] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Medal className="w-8 h-8 text-[var(--color-primary)]" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Recognition</h3>
+                <p className="text-gray-600">Striving for continued recognition and industry leadership</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-[var(--color-primary-light)]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Experience Award-Winning Excellence
+            </h2>
+            <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+              Partner with a recognized industry leader. Our track record of awards and recognition 
+              speaks to our commitment to delivering exceptional value and maintaining the highest standards.
+            </p>
+
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <CTA_Buttons
+                primaryText="Work With Us"
+                primaryHref=""
+                secondaryText="View Our Services"
+                secondaryHref=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export default AwardsRecognitionPage;

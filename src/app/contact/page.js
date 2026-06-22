@@ -67,13 +67,13 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Phone Support",
-      details: ["+94 11 234 5678", "+94 77 123 4567"],
+      details: ["+94 112 746 010"],
       subtitle: "Mon-Fri 9AM-6PM, Sat 9AM-2PM"
     },
     {
       icon: Mail,
       title: "Email Support",
-      details: ["support@verifieze.com", "sales@verifieze.com"],
+      details: ["checks@verifieze.com"],
       subtitle: "24/7 Email Support"
     },
     {
@@ -95,25 +95,25 @@ export default function Contact() {
       icon: Headphones,
       title: "Technical Support",
       description: "API integration, troubleshooting, and system status",
-      contact: "tech@verifieze.com"
+      contact: "checks@verifieze.com"
     },
     {
       icon: Users,
       title: "Sales Team",
       description: "Pricing, demos, and business inquiries",
-      contact: "sales@verifieze.com"
+      contact: "checks@verifieze.com"
     },
     {
       icon: Shield,
       title: "Compliance Team",
       description: "Data privacy, security, and regulatory questions",
-      contact: "compliance@verifieze.com"
+      contact: "checks@verifieze.com"
     },
     {
       icon: MessageCircle,
       title: "Customer Success",
       description: "Account management and service optimization",
-      contact: "success@verifieze.com"
+      contact: "checks@verifieze.com"
     }
   ];
 
@@ -385,53 +385,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Frequently Asked{" "}
-              <span className="text-[var(--color-primary)]">Questions</span>
-            </h2>
-            <p className="text-lg text-gray-600">
-              Quick answers to common questions about our verification services
-            </p>
-          </div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="max-w-4xl mx-auto space-y-6"
-          >
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
-                  <CheckCircle className="w-6 h-6 text-[var(--color-primary)]" />
-                  {faq.question}
-                </h3>
-                <p className="text-gray-600 ml-9">{faq.answer}</p>
-              </div>
-            ))}
-          </motion.div>
-
-          <div className="text-center mt-12">
-            <p className="text-lg text-gray-600 mb-6">
-              Can't find what you're looking for?
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <CTA_Buttons
-              primaryText="View Full FAQ"
-              primaryHref="/faq"
-              secondaryText="Contact Support"
-              secondaryHref="#contact-form"
-            />
-            </div>
-            
-          </div>
-        </div>
-      </section>
+    
 
       {/* Office Hours & Location */}
       <section className="py-16 bg-gray-50">
@@ -477,7 +431,7 @@ export default function Contact() {
                   className="inline-flex items-center mt-4 text-[var(--color-primary)] font-semibold hover:underline"
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  +94 77 123 4567
+                  +94 112 746 010
                 </a>
               </div>
             </div>
@@ -530,45 +484,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-16 bg-[var(--color-primary-light)]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-              Don't wait! Contact us today and discover how Verifieze can transform 
-              your verification process with our cutting-edge technology.
-            </p>
-
-            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-              <CTA_Buttons
-                primaryText="Start Free Trial"
-                primaryHref="/get-started"
-                secondaryText="Schedule Demo"
-                secondaryHref="/demo"
-              />
-            </div>
-
-            {/* Trust indicators */}
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-[var(--color-success)]" />
-                <span>Quick Response Guaranteed</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-[var(--color-primary)]" />
-                <span>ISO 27001 Certified</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Award className="w-4 h-4 text-[var(--color-primary)]" />
-                <span>Enterprise Grade Security</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </>
   );
 }

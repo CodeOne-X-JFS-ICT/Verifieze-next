@@ -49,40 +49,46 @@ export default function Navbar() {
         {
           category: 'Criminal Clearance',
           items: [
-            { name: 'Grama Sevaka Clearance', href: '/products/grama-sevaka-clearance' },
-            { name: 'Basic Police Clearance', href: '/products/basic-police-clearance' },
-            { name: 'Advance Police Clearance', href: '/products/advance-police-clearance' }
+            { name: 'Basic Clearance', href: '/criminal-clearance/basic-clearance' },
+            { name: 'Advanced Clearance', href: '/criminal-clearance/advanced-clearance' }
           ]
         },
         {
           category: 'Reference Checks',
           items: [
-            { name: 'Referees', href: '/products/referees' },
+            { name: 'Referees', href: '/reference-checks/referees' },
             { name: 'Character Confirmations', href: '/products/character-confirmations' }
           ]
         }
       ]
     },
     {
-      title: 'Due Diligence',
+      title: 'Compliance',
       hasDropdown: true,
       content: [
         {
-          category: 'Registration',
+          category: '',
           items: [
-            { name: 'ROC doc', href: '/due-diligence/roc-doc' }
+            { name: 'Data Protection', href: '/compliance/data-protection' },
+            { name: 'Finance', href: '/compliance/finance' },
+            { name: 'Labour', href: '/compliance/labour' },
+            { name: 'Health and Safety', href: '/compliance/health-and-safety' },
+            { name: 'Biz Continuation', href: '/compliance/biz-continuation' }
           ]
-        },
+        }
+      ]
+    },
+    {
+      title: 'Risk',
+      hasDropdown: true,
+      content: [
         {
-          category: 'Taxes',
+          category: '',
           items: [
-            { name: 'IRD registrations', href: '/due-diligence/ird-registrations' }
-          ]
-        },
-        {
-          category: 'Compliance',
-          items: [
-            { name: 'EPF/ETF registrations', href: '/due-diligence/epf-etf-registrations' }
+            { name: 'Risk Assessments', href: '/risk/assessments' },
+            { name: 'BCP', href: '/risk/bcp' },
+            { name: 'Fire Drills', href: '/risk/fire-drills' },
+            { name: 'Surveillance', href: '/risk/surveillance' }
           ]
         }
       ]
@@ -94,25 +100,30 @@ export default function Navbar() {
         {
           category: '',
           items: [
-            { name: 'ISO', href: '/data-security/iso' }
+            { name: 'ISO', href: '/iso' }
           ]
         }
       ]
     },
     {
-      title: 'About JFS',
+      title: 'HRTECHZ',
       hasDropdown: true,
       content: [
         {
           category: '',
           items: [
-            { name: 'JFS', href: '/JFS' },
+            { name: 'HRTECHZ', href: '/HRTECHZ' },
             { name: 'Awards', href: '/awards' },
-            { name: 'CSR', href: '/about/csr' },
+            { name: 'CSR', href: '/csr' },
             { name: 'Annual Reports', href: '/about/annual-reports' }
           ]
         }
       ]
+    },
+    {
+      title: 'Blog',
+      hasDropdown: false,
+      href: '/blog'
     },
     {
       title: 'Contact',
@@ -216,21 +227,13 @@ export default function Navbar() {
               <Link href="/support" className="text-gray-500 hover:text-gray-700 transition-colors duration-200">
                 Support
               </Link>
-              <Link href="/my-check" className="text-gray-500 hover:text-gray-700 transition-colors duration-200">
-                My Check
-              </Link>
-              <Link href="/login" className="text-gray-500 hover:text-gray-700 transition-colors duration-200">
+              <Link href="https://checkengine.verifieze.com/" className="text-gray-500 hover:text-gray-700 transition-colors duration-200">
                 Log in
               </Link>
             </div>
             
             <div className="flex items-center space-x-3">
-              <Link href="/signup">
-                <button className="bg-[#009BB5] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#0085a0] transition-all duration-200 hover:shadow-md">
-                  Sign up
-                </button>
-              </Link>
-              <Link href="/talk-to-sales">
+              <Link href="/contact">
                 <button className="border border-[#009BB5] text-[#009BB5] bg-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#009BB5] hover:text-white transition-all duration-200">
                   Talk to sales
                 </button>
@@ -325,20 +328,12 @@ export default function Navbar() {
               <Link href="/support" className="block px-4 py-3 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-200 touch-manipulation">
                 Support
               </Link>
-              <Link href="/my-check" className="block px-4 py-3 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-200 touch-manipulation">
-                My Check
-              </Link>
-              <Link href="/login" className="block px-4 py-3 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-200 touch-manipulation">
+              <Link href="https://checkengine.verifieze.com/" className="block px-4 py-3 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-lg transition-all duration-200 touch-manipulation">
                 Log in
               </Link>
               
               {/* Mobile CTA Buttons */}
               <div className="pt-4 space-y-3 px-4">
-                <Link href="/signup">
-                  <button className="w-full bg-[#009BB5] text-white px-6 py-4 rounded-lg text-base font-medium hover:bg-[#0085a0] transition-all duration-200 touch-manipulation shadow-sm">
-                    Sign up
-                  </button>
-                </Link>
                 <Link href="/talk-to-sales">
                   <button className="w-full border-2 border-[#009BB5] text-[#009BB5] bg-white px-6 py-4 rounded-lg text-base font-medium hover:bg-[#009BB5] hover:text-white transition-all duration-200 touch-manipulation">
                     Talk to sales

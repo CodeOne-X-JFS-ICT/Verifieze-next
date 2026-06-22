@@ -41,21 +41,20 @@ function EmploymentVerificationPage() {
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
                 <span className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] bg-clip-text text-transparent">
-                  Verify Past Employment History
+                  Employment History Verification
                 </span>
                 <br />
-                to Ensure Honest Hiring
+                — Hire Genuine Experience
               </h1>
               <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl leading-relaxed">
-                Confirm your candidates' job experience, roles, and tenure
-                across local and global employers.
+                Past performance is the single best predictor of future success. We go deep beneath the surface of a CV to validate a candidate's true professional track record — protecting your team from inflated titles, fabricated timelines, and hidden liabilities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <CTA_Buttons
                   primaryText="Start Verifying"
-                  primaryHref=""
-                  secondaryText="Book a Demo"
-                  secondaryHref=""
+                  primaryHref="/contact"
+                  secondaryText="Talk to Sales"
+                  secondaryHref="/contact"
                 />
               </div>
             </div>
@@ -96,22 +95,16 @@ function EmploymentVerificationPage() {
         </div>
       </section>
 
-      {/* What is Employment Verification? */}
+      {/* Scope & Coverage Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What is{" "}
-              <span className="text-[var(--color-primary)]">
-                Employment Verification
-              </span>
-              ?
+              Scope &{" "}
+              <span className="text-[var(--color-primary)]">Coverage</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Employment verification is the process of confirming a candidate's
-              work history, job titles, employment dates, and other relevant
-              details with their previous employers to ensure the accuracy of
-              their resume and claims.
+              We verify the official service letters and employment records of your candidate's previous workplaces. This service applies to any currently operating local company or international firm with an active, existing branch in Sri Lanka.
             </p>
           </div>
 
@@ -122,8 +115,7 @@ function EmploymentVerificationPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Detect Fraud</h3>
               <p className="text-gray-600">
-                Identify false claims and fabricated work history before making
-                hiring decisions.
+                Authenticate service letters and official workplace records to expose inflated titles and fabricated timelines.
               </p>
             </div>
 
@@ -131,12 +123,9 @@ function EmploymentVerificationPage() {
               <div className="w-12 h-12 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-4">
                 <FileText className="w-6 h-6 text-[var(--color-primary)]" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Regulatory Compliance
-              </h3>
+              <h3 className="text-xl font-semibold mb-2">Local & International</h3>
               <p className="text-gray-600">
-                Meet industry standards and legal requirements for thorough
-                background screening.
+                Covers any currently operating local company or international firm with an active branch in Sri Lanka.
               </p>
             </div>
 
@@ -144,10 +133,9 @@ function EmploymentVerificationPage() {
               <div className="w-12 h-12 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-4">
                 <AlertTriangle className="w-6 h-6 text-[var(--color-primary)]" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Reduce Liability</h3>
+              <h3 className="text-xl font-semibold mb-2">Eliminate Hidden Risks</h3>
               <p className="text-gray-600">
-                Minimize legal risks and protect your organization from
-                negligent hiring claims.
+                Protect your organization from hidden liabilities and ensure you are hiring genuine, verified experience.
               </p>
             </div>
           </div>
@@ -207,89 +195,86 @@ function EmploymentVerificationPage() {
       />
 
       {/* Verification Methods Section */}
-
-      <section className="relative py-20 bg-gradient-to-br from-white to-[var(--color-primary-light)] overflow-hidden ">
-        <div className="relative max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-gradient-to-br from-white to-[var(--color-primary-light)] overflow-hidden">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[var(--color-primary)] mb-4 animate-fade-in-up">
-              Verification Methods
+            <h2 className="text-4xl font-bold text-[var(--color-primary)] mb-4">
+              Verification Options
             </h2>
-            <p className="text-xl text-gray-500  animate-fade-in-up-delay">
-              Multiple verification channels for comprehensive coverage
+            <p className="text-xl text-gray-500">
+              Two distinct levels of validation for maximum flexibility and certainty
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+            {/* Option 1 */}
             <div className="group relative">
-              <div className="absolute inset-0 bg-white rounded-2xl transition-all duration-300 shadow-xl"></div>
-              <div className="relative text-center p-8 rounded-2xl bg-white hover-shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="w-20 h-20 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-opacity-20 transition-all duration-300 animate-bounce-on-hover">
-                  <div className="flex">
-                    <Mail className="w-7 h-7 text-[var(--color-primary)] mr-1" />
-                    <Phone className="w-7 h-7 text-[var(--color-primary)]" />
+              <div className="absolute inset-0 bg-white rounded-2xl shadow-xl"></div>
+              <div className="relative p-10 rounded-2xl bg-white hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <div className="w-16 h-16 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="flex gap-1">
+                    <Mail className="w-6 h-6 text-[var(--color-primary)]" />
+                    <Phone className="w-6 h-6 text-[var(--color-primary)]" />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Email & Phone
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Direct contact with HR departments and managers for real-time
-                  verification
+                <div className="text-center mb-6">
+                  <span className="inline-block bg-[var(--color-primary)] text-white text-xs font-bold px-3 py-1 rounded-full mb-3">OPTION 1</span>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Record Verification</h3>
+                  <p className="text-[var(--color-primary)] font-semibold text-sm">Dual-Layer Authentication</p>
+                </div>
+                <p className="text-gray-600 mb-6 text-center">
+                  Our standard, highly secure digital check with a strict two-step confirmation process to eliminate fraud.
                 </p>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3 bg-gray-50 rounded-lg p-4">
+                    <Mail className="w-5 h-5 text-[var(--color-primary)] mt-0.5 shrink-0" />
+                    <div>
+                      <p className="font-semibold text-gray-800 text-sm">Official Domain Email</p>
+                      <p className="text-gray-500 text-xs mt-1">Direct verification through the previous employer's official company email domain. No generic addresses accepted.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 bg-gray-50 rounded-lg p-4">
+                    <Phone className="w-5 h-5 text-[var(--color-primary)] mt-0.5 shrink-0" />
+                    <div>
+                      <p className="font-semibold text-gray-800 text-sm">Direct HR Phone Audit</p>
+                      <p className="text-gray-500 text-xs mt-1">A confirmation with the company's Human Resources department to secure and cross-reference the data.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
+            {/* Option 2 */}
             <div className="group relative">
-              <div className="absolute inset-0 bg-white rounded-2xl transition-all duration-300 shadow-xl"></div>
-              <div className="relative text-center p-8 rounded-2xl bg-white hover-shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="w-20 h-20 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-opacity-20 transition-all duration-300 animate-bounce-on-hover">
-                  <div className="flex">
-                    <Users className="w-7 h-7 text-[var(--color-primary)]" />
+              <div className="absolute inset-0 bg-white rounded-2xl shadow-xl"></div>
+              <div className="relative p-10 rounded-2xl bg-white hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <div className="w-16 h-16 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Search className="w-8 h-8 text-[var(--color-primary)]" />
+                </div>
+                <div className="text-center mb-6">
+                  <span className="inline-block bg-gray-700 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">OPTION 2</span>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Physical Verification</h3>
+                  <p className="text-gray-600 font-semibold text-sm">On-Site Audit</p>
+                </div>
+                <p className="text-gray-600 mb-6 text-center">
+                  For high-stakes hires or companies without a responsive digital infrastructure, we deploy our field agents to verify records on-site.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3 bg-gray-50 rounded-lg p-4">
+                    <CheckCircle className="w-5 h-5 text-[var(--color-success)] mt-0.5 shrink-0" />
+                    <div>
+                      <p className="font-semibold text-gray-800 text-sm">Western Province (WP)</p>
+                      <p className="text-gray-500 text-xs mt-1">Fully covered and available for immediate deployment.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 bg-gray-50 rounded-lg p-4">
+                    <CheckCircle className="w-5 h-5 text-[var(--color-success)] mt-0.5 shrink-0" />
+                    <div>
+                      <p className="font-semibold text-gray-800 text-sm">Other Provinces</p>
+                      <p className="text-gray-500 text-xs mt-1">Available nationwide. Custom pricing and timelines provided upon request based on your specific location.</p>
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  HR Integration
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Seamless integration with HRIS and payroll systems for
-                  automated checks
-                </p>
-              </div>
-            </div>
-
-            <div className="group relative">
-              <div className="absolute inset-0 bg-white rounded-2xl transition-all duration-300 shadow-xl"></div>
-              <div className="relative text-center p-8 rounded-2xl bg-white hover-shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="w-20 h-20 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-opacity-20 transition-all duration-300 animate-bounce-on-hover">
-                  <div className="flex">
-                    <Upload className="w-7 h-7 text-[var(--color-primary)]" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Document Upload
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Secure document submission and verification with encrypted
-                  storage
-                </p>
-              </div>
-            </div>
-
-            <div className="group relative ">
-              <div className="absolute inset-0 bg-white rounded-2xl transition-all duration-300 shadow-xl"></div>
-              <div className="relative text-center p-8 rounded-2xl bg-white hover-shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="w-20 h-20 bg-[var(--color-primary-light)]  rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-opacity-20 transition-all duration-300 animate-bounce-on-hover">
-                  <div className="flex">
-                    <Brain className="w-7 h-7 text-[var(--color-primary)]" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  AI-Based Checks
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Advanced algorithms for pattern recognition and anomaly
-                  detection
-                </p>
               </div>
             </div>
           </div>
@@ -491,8 +476,7 @@ function EmploymentVerificationPage() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <PricingSection />
+      
 
       {/* Final CTA Section */}
 

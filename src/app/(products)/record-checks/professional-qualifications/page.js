@@ -35,26 +35,24 @@ function ProfessionalQualificarions() {
 
         <div className="container mx-auto px-4 py-20 md:py-28 lg:py-32 text-center relative z-10">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Validate Professional Certifications and
+            Academic Degrees Only Tell
             <br />
             <span className="text-[var(--color-primary)]">
-              Licenses with Confidence
+              Half the Story
             </span>
           </h1>
 
           <p className="text-xl mb-8 text-gray-600 max-w-3xl mx-auto">
-            Ensure your candidates meet industry standards by verifying their
-            claimed professional qualifications and certifications across all
-            sectors.
+            For roles requiring specialized technical, financial, or management expertise, VERIFIEZE validates professional credentials directly with issuing bodies — ensuring your hire holds genuine, recognized authority in their field.
           </p>
 
           {/* Action buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <CTA_Buttons
-              primaryText="Verify Qualifications"
-              primaryHref=""
-              secondaryText="Schedule a Demo"
-              secondaryHref=""
+              primaryText="Start Verifying"
+              primaryHref="/contact"
+              secondaryText="Talk to Sales"
+              secondaryHref="/contact"
             />
           </div>
         </div>
@@ -66,16 +64,13 @@ function ProfessionalQualificarions() {
           {/* Section Header */}
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What is{" "}
+              Product{" "}
               <span className="text-[var(--color-primary)]">
-                Professional Qualification Verification
+                Scope
               </span>
-              ?
             </h2>
             <p className="text-lg text-gray-600">
-              This service confirms the legitimacy of licenses, certificates, or
-              professional memberships claimed by individuals across various
-              industries, ensuring authenticity and compliance.
+              Direct credential checks for professional certifications, memberships, and licensures — such as CIMA, ACCA, CA Sri Lanka, CIM, BCS, SLASSCOM, or other chartered and technical institutes.
             </p>
           </div>
 
@@ -87,25 +82,25 @@ function ProfessionalQualificarions() {
             viewport={{ once: true, amount: 0.2 }}
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
-            {/* Prevents Fraud */}
+            {/* Lapsed memberships */}
             <FeatureCard
               icon={ShieldCheck}
-              title="Prevents Fraudulent Claims"
-              description="Protect your organization from fake credentials and unqualified candidates."
+              title="Detect Lapsed Memberships"
+              description="Protect your organization from hiring individuals with expired or lapsed professional memberships they still claim."
             />
 
-            {/* Regulated Industries */}
-            <FeatureCard
-              icon={Building2}
-              title="Essential for Regulated Industries"
-              description="Critical for healthcare, finance, engineering, and other compliance-heavy sectors."
-            />
-
-            {/* Operational Safety */}
+            {/* Falsified Grades */}
             <FeatureCard
               icon={BadgeCheck}
-              title="Supports Compliance & Safety"
-              description="Ensures operational safety and meets regulatory requirements across industries."
+              title="Expose Falsified Technical Grades"
+              description="Validate that examination completions and technical grades are genuine and match the candidate's claims."
+            />
+
+            {/* Disciplinary Standing */}
+            <FeatureCard
+              icon={Building2}
+              title="Uncover Disciplinary Standing"
+              description="Identify undisclosed disciplinary actions or sanctions with the relevant professional body."
             />
           </motion.div>
         </div>
@@ -120,91 +115,92 @@ function ProfessionalQualificarions() {
               <span className="text-[var(--color-primary)]">Verify</span>
             </h2>
             <p className="text-lg text-gray-600">
-              Comprehensive verification across all professional credentials and
-              certifications
+              Active membership status, examination completions, and disciplinary standing with the relevant local or international professional body operating within Sri Lanka.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {/* Professional Licenses */}
+            {/* Finance & Accounting */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="bg-[var(--color-primary-light)] p-3 rounded-full w-fit mb-4">
                 <Award className="w-6 h-6 text-[var(--color-primary)]" />
               </div>
               <h3 className="text-xl font-semibold mb-3">
-                Professional Licenses
+                Finance & Accounting Bodies
               </h3>
               <p className="text-gray-600 mb-3">
-                CPA, RN, PMP, Legal Bar, and other professional licenses
+                CIMA, ACCA, CA Sri Lanka, and other chartered finance & accounting institutes
               </p>
               <div className="flex items-center text-sm text-[var(--color-primary)]">
                 <CheckCircle className="w-4 h-4 mr-2" />
-                Verified with issuing authorities
+                Verified with issuing professional body
               </div>
             </div>
-            {/* IT Certifications */}
+
+            {/* Management & Marketing */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="bg-[var(--color-primary-light)] p-3 rounded-full w-fit mb-4">
                 <FileCheck className="w-6 h-6 text-[var(--color-primary)]" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">IT Certifications</h3>
+              <h3 className="text-xl font-semibold mb-3">Management & Marketing</h3>
               <p className="text-gray-600 mb-3">
-                AWS, Cisco, Oracle, Microsoft, and other tech certifications
+                CIM and other chartered management & marketing professional qualifications
               </p>
               <div className="flex items-center text-sm text-[var(--color-primary)]">
                 <CheckCircle className="w-4 h-4 mr-2" />
-                Real-time database verification
-              </div>
-            </div>
-            {/* Healthcare Credentials */}
-            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="bg-[var(--color-primary-light)] p-3 rounded-full w-fit mb-4">
-                <Stethoscope className="w-6 h-6 text-[var(--color-primary)]" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Healthcare Credentials</h3>
-              <p className="text-gray-600 mb-3">Medical Board Licenses, nursing certifications, and specialized credentials</p>
-              <div className="flex items-center text-sm text-[var(--color-primary)]">
-                <CheckCircle className="w-4 h-4 mr-2" />
-                Medical board verification
+                Active membership status confirmed
               </div>
             </div>
 
-            {/* Trade Skills */}
+            {/* IT & Tech */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="bg-[var(--color-primary-light)] p-3 rounded-full w-fit mb-4">
-                <Wrench className="w-6 h-6 text-[var(--color-primary)]" />
+                <Search className="w-6 h-6 text-[var(--color-primary)]" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Trade Skills & Vocational</h3>
-              <p className="text-gray-600 mb-3">Electrician licenses, plumbing certifications, and skilled trade credentials</p>
+              <h3 className="text-xl font-semibold mb-3">IT & Technology</h3>
+              <p className="text-gray-600 mb-3">BCS, SLASSCOM, and other technology and computing professional bodies</p>
               <div className="flex items-center text-sm text-[var(--color-primary)]">
                 <CheckCircle className="w-4 h-4 mr-2" />
-                Trade authority validation
+                Certification & grade validation
               </div>
             </div>
 
-            {/* Professional Memberships */}
+            {/* Other Professional Bodies */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="bg-[var(--color-primary-light)] p-3 rounded-full w-fit mb-4">
                 <Users className="w-6 h-6 text-[var(--color-primary)]" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Professional Memberships</h3>
-              <p className="text-gray-600 mb-3">IEEE, CFA Institute, Bar Associations, and other professional bodies</p>
+              <h3 className="text-xl font-semibold mb-3">Other Chartered Institutes</h3>
+              <p className="text-gray-600 mb-3">Any other currently existing local or international professional body operating within Sri Lanka</p>
               <div className="flex items-center text-sm text-[var(--color-primary)]">
                 <CheckCircle className="w-4 h-4 mr-2" />
                 Membership status verification
               </div>
             </div>
 
-            {/* Academic Credentials */}
+            {/* Examination Completions */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="bg-[var(--color-primary-light)] p-3 rounded-full w-fit mb-4">
                 <GraduationCap className="w-6 h-6 text-[var(--color-primary)]" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Academic Credentials</h3>
-              <p className="text-gray-600 mb-3">Degrees, diplomas, and academic certifications from institutions</p>
+              <h3 className="text-xl font-semibold mb-3">Examination Completions</h3>
+              <p className="text-gray-600 mb-3">Verification of specific examination passes, grades, and technical qualification levels</p>
               <div className="flex items-center text-sm text-[var(--color-primary)]">
                 <CheckCircle className="w-4 h-4 mr-2" />
-                Institution verification
+                Directly confirmed with the body
+              </div>
+            </div>
+
+            {/* Disciplinary Standing */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="bg-[var(--color-primary-light)] p-3 rounded-full w-fit mb-4">
+                <Wrench className="w-6 h-6 text-[var(--color-primary)]" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Disciplinary Standing</h3>
+              <p className="text-gray-600 mb-3">Check for any undisclosed disciplinary actions or sanctions recorded by the professional body</p>
+              <div className="flex items-center text-sm text-[var(--color-primary)]">
+                <CheckCircle className="w-4 h-4 mr-2" />
+                Confidential standing review
               </div>
             </div>
           </div>
@@ -231,9 +227,9 @@ function ProfessionalQualificarions() {
             {/* Right Column - Process Steps */}
             <div className="lg:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                Our{" "}
+                Authenticity{" "}
                 <span className="text-[var(--color-primary)]">
-                  Verification Process
+                  Check
                 </span>
               </h2>
 
@@ -244,9 +240,9 @@ function ProfessionalQualificarions() {
                     1
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold">Collect Credentials</h3>
+                    <h3 className="text-lg font-semibold">Active Membership Status</h3>
                     <p className="text-gray-600 mt-1">
-                      Gather credential information via candidate input or API integration
+                      We confirm whether the candidate's membership is currently active and in good standing with the professional body.
                     </p>
                   </div>
                 </div>
@@ -257,9 +253,9 @@ function ProfessionalQualificarions() {
                     2
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold">Cross-Check with Authorities</h3>
+                    <h3 className="text-lg font-semibold">Examination Completions & Grades</h3>
                     <p className="text-gray-600 mt-1">
-                      Verify against issuing authorities and official databases
+                      Validate that specific examination passes and technical grades are genuine and correspond to the candidate's stated level.
                     </p>
                   </div>
                 </div>
@@ -270,9 +266,9 @@ function ProfessionalQualificarions() {
                     3
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold">Validate Details</h3>
+                    <h3 className="text-lg font-semibold">Disciplinary Standing</h3>
                     <p className="text-gray-600 mt-1">
-                      Confirm license number, status, and expiration dates
+                      Check for any undisclosed disciplinary records or sanctions held by the professional body against the candidate.
                     </p>
                   </div>
                 </div>
@@ -283,22 +279,9 @@ function ProfessionalQualificarions() {
                     4
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold">Flag Discrepancies</h3>
+                    <h3 className="text-lg font-semibold">Transparent Fee Disclosure</h3>
                     <p className="text-gray-600 mt-1">
-                      Identify mismatches, expired, or inactive status
-                    </p>
-                  </div>
-                </div>
-
-                {/* Step 5 */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-[var(--color-primary)] text-white p-2 rounded-full min-w-[40px] h-10 flex items-center justify-center font-bold">
-                    5
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold">Generate Digital Report</h3>
-                    <p className="text-gray-600 mt-1">
-                      Provide comprehensive report with verification outcome
+                      Any official verification or registry fees levied by the professional body are fully disclosed upfront — no hidden margins.
                     </p>
                   </div>
                 </div>
@@ -330,32 +313,32 @@ function ProfessionalQualificarions() {
             viewport={{ once: true, amount: 0.2 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
-            {/* Global Certifying Bodies */}
+            {/* Chartered Financial Bodies */}
             <FeatureCard
               icon={Award}
-              title="Global Certifying Bodies"
-              description="PMI, AWS, Microsoft, Oracle, and other international certification providers"
+              title="Chartered Financial Bodies"
+              description="CIMA, ACCA, CA Sri Lanka, and all major chartered finance and accounting institutes"
             />
 
-            {/* Government Authorities */}
+            {/* Management & Tech */}
             <FeatureCard
               icon={Building2}
-              title="Government Licensing Authorities"
-              description="State boards, federal agencies, and regulatory bodies across jurisdictions"
+              title="Management & Technology"
+              description="CIM, BCS, SLASSCOM, and chartered management, marketing, and IT professional institutes"
             />
 
-            {/* Industry Associations */}
+            {/* Other Local Bodies */}
             <FeatureCard
               icon={Users}
-              title="Industry Associations"
-              description="Professional boards, trade associations, and membership organizations"
+              title="All Local Professional Bodies"
+              description="Any currently existing local or international professional body with active operations within Sri Lanka"
             />
 
             {/* Direct Verification */}
             <FeatureCard
               icon={Search}
-              title="Direct Outreach"
-              description="Direct contact with issuers for rare, legacy, or specialized certificates"
+              title="Direct Body Verification"
+              description="All checks conducted directly with the relevant professional body — no intermediaries"
             />
           </motion.div>
 
@@ -404,9 +387,9 @@ function ProfessionalQualificarions() {
               
               <CTA_Buttons 
                 primaryText="Start Verifying"
-                primaryHref=""
+                primaryHref="/contact"
                 secondaryText="Talk to Sales"
-                secondaryHref=""
+                secondaryHref="/contact"
               />
             </div>
           </div>

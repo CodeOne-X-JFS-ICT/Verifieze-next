@@ -28,21 +28,20 @@ function IdentityVerificationPage() {
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
                 <span className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] bg-clip-text text-transparent">
-                  Instant Identity Verification
+                  Trust Begins with
                 </span>
                 <br />
-                for Trust and Compliance
+                Absolute Certainty
               </h1>
               <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl leading-relaxed">
-                Match personal identity documents to real individuals using
-                national databases and advanced biometric tools.
+                In an era of digital onboarding, remote workforces, and sophisticated credential fraud, confirming your candidate's true identity is your organization's primary line of defense.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <CTA_Buttons
-                  primaryText="Verify Identity"
-                  primaryHref=""
-                  secondaryText="Schedule Demo"
-                  secondaryHref=""
+                  primaryText="Start Verifying"
+                  primaryHref="/contact"
+                  secondaryText="Talk to Sales"
+                  secondaryHref="/contact"
                 />
               </div>
             </div>
@@ -91,21 +90,17 @@ function IdentityVerificationPage() {
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What is{" "}
+              Identity{" "}
               <span className="text-[var(--color-primary)]">
-                Identity Verification
+                Verification
               </span>
-              ?
             </h2>
 
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
+              VERIFIEZE offers an Identity Verification service to establish a bulletproof foundation for your screening process, ensuring that the individual you are interviewing, onboarding, and paying is exactly who they claim to be.
+            </p>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Identity verification is the process of confirming that
-              individuals are who they claim to be by validating their personal
-              information against authoritative sources. Our platform combines
-              document authentication, biometric analysis, and database
-              cross-referencing to provide comprehensive identity validation
-              that meets compliance requirements while delivering a seamless
-              user experience.
+              We validate key government-issued documentation such as National Identity Cards (NIC), offering two distinct, high-security levels of authentication.
             </p>
           </div>
         </div>
@@ -115,62 +110,93 @@ function IdentityVerificationPage() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              What We <span className="text-[var(--color-primary)]">Check</span>
+              Two Distinct <span className="text-[var(--color-primary)]">Verification Options</span>
             </h2>
             <p className="text-xl text-gray-600">
-              Comprehensive verification across multiple identity factors
+              Choose the level of authentication that matches your security requirements
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: CreditCard,
-                title: "National ID",
-                desc: "Government-issued identification",
-              },
-              {
-                icon: Globe,
-                title: "Passport",
-                desc: "International travel documents",
-              },
-              {
-                icon: ScanFace,
-                title: "Facial Recognition",
-                desc: "Biometric facial matching",
-              },
-              {
-                icon: Home,
-                title: "Address Match",
-                desc: "Residential verification",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-center"
-              >
-                <div className="w-16 h-16 bg-[var(--color-primary-light)] rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <item.icon className="w-8 h-8 text-[var(--color-primary)]" />
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Option 1 */}
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-[var(--color-primary)]">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 bg-[var(--color-primary)] rounded-full flex items-center justify-center text-white font-bold text-xl">1</div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Open Record Verification</h3>
+                  <span className="text-sm text-[var(--color-primary)] font-medium">Swift & Data-Driven</span>
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
-            ))}
+              <p className="text-gray-600 leading-relaxed mb-6">
+                A swift, data-driven audit that cross-checks and authenticates the candidate's exact NIC details directly against official government online databases to ensure immediate data integrity.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <div className="bg-[var(--color-primary-light)] p-1.5 rounded-full mt-0.5">
+                    <CreditCard className="w-4 h-4 text-[var(--color-primary)]" />
+                  </div>
+                  <span className="text-gray-700">NIC details authenticated at source</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="bg-[var(--color-primary-light)] p-1.5 rounded-full mt-0.5">
+                    <Zap className="w-4 h-4 text-[var(--color-primary)]" />
+                  </div>
+                  <span className="text-gray-700">Cross-checked against official government online databases</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="bg-[var(--color-primary-light)] p-1.5 rounded-full mt-0.5">
+                    <CheckCircle className="w-4 h-4 text-[var(--color-primary)]" />
+                  </div>
+                  <span className="text-gray-700">Fast turnaround for immediate data integrity</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Option 2 */}
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-[var(--color-primary-dark)]">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 bg-[var(--color-primary-dark)] rounded-full flex items-center justify-center text-white font-bold text-xl">2</div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Direct System Verification</h3>
+                  <span className="text-sm font-medium" style={{color: 'var(--color-primary-dark)'}}>Elite & High-Assurance</span>
+                </div>
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                An elite, high-assurance check where we directly check with the Databases of the Department for Registration of Persons (DRP) to verify the authenticity and records of the candidate's NIC at the source.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <div className="bg-[var(--color-primary-light)] p-1.5 rounded-full mt-0.5">
+                    <Shield className="w-4 h-4 text-[var(--color-primary)]" />
+                  </div>
+                  <span className="text-gray-700">Direct DRP database access — the authoritative source</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="bg-[var(--color-primary-light)] p-1.5 rounded-full mt-0.5">
+                    <Fingerprint className="w-4 h-4 text-[var(--color-primary)]" />
+                  </div>
+                  <span className="text-gray-700">Highest assurance level for sensitive roles</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="bg-[var(--color-primary-light)] p-1.5 rounded-full mt-0.5">
+                    <CheckCircle className="w-4 h-4 text-[var(--color-primary)]" />
+                  </div>
+                  <span className="text-gray-700">Verification at the Department for Registration of Persons</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our Platform
+              Why Identity Verification <span className="text-[var(--color-primary)]">Matters</span>
             </h2>
             <p className="text-xl text-gray-600">
-              Trusted by thousands of businesses worldwide
+              Protecting your company from severe security breaches starts here
             </p>
           </div>
 
@@ -178,23 +204,23 @@ function IdentityVerificationPage() {
             {[
               {
                 icon: Shield,
-                title: "Prevent Identity Fraud",
-                desc: "Advanced ML algorithms detect sophisticated fraud attempts",
+                title: "Prevent Security Breaches",
+                desc: "Ensure the individual you hire is exactly who they claim to be — protecting your company from severe security risks",
               },
               {
                 icon: CheckCircle,
-                title: "Ensure Compliance",
-                desc: "Meet KYC, AML, and regulatory requirements globally",
+                title: "Bulletproof Screening Foundation",
+                desc: "Establish a solid identity baseline before any other background checks proceed",
               },
               {
                 icon: Zap,
-                title: "Fast Onboarding",
-                desc: "Verify identities in seconds, not days",
+                title: "Secure Remote Onboarding",
+                desc: "Counter sophisticated credential fraud in digital and hybrid onboarding environments",
               },
               {
                 icon: Globe,
-                title: "Global Reach",
-                desc: "Support for documents from 195+ countries",
+                title: "Government-Source Authentication",
+                desc: "All checks conducted against official government databases — NIC validated at the Department for Registration of Persons",
               },
             ].map((item, index) => (
               <div
@@ -233,9 +259,9 @@ function IdentityVerificationPage() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <CTA_Buttons
                 primaryText="Start Verifying"
-                primaryHref=""
+                primaryHref="/contact"
                 secondaryText="Talk to Sales"
-                secondaryHref=""
+                secondaryHref="/contact"
               />
             </div>
           </div>

@@ -39,25 +39,24 @@ function AcademicVerificationPage() {
 
         <div className="container mx-auto px-4 py-20 md:py-28 lg:py-32 text-center relative z-10">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Verify Academic Credentials with
+            Don't Let a Polished Resume
             <br />
             <span className="text-[var(--color-primary)]">
-              Confidence and Speed
+              Mask a Lack of Credentials
             </span>
           </h1>
 
           <p className="text-xl mb-8 text-gray-600">
-            Ensure the integrity of your hires with verified educational
-            background checks from trusted institutions
+            VERIFIEZE's Academic Verification service ensures your candidates possess the exact academic foundation they claim — protecting your company from credential fraud and the global surge in diploma mills.
           </p>
 
           {/* Action buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <CTA_Buttons
-              primaryText="Sign up"
-              primaryHref=""
+              primaryText="Start Verifying"
+              primaryHref="/contact"
               secondaryText="Talk to Sales"
-              secondaryHref=""
+              secondaryHref="/contact"
             />
           </div>
         </div>
@@ -68,60 +67,54 @@ function AcademicVerificationPage() {
           {/* Section Header */}
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What is{" "}
+              Scope &{" "}
               <span className="text-[var(--color-primary)]">
-                Academic Verification
+                Coverage
               </span>
-              ?
             </h2>
             <p className="text-lg text-gray-600">
-              Academic verification is the process of confirming a candidate's
-              educational qualifications, such as degree, course, institution,
-              and graduation year.
+              Comprehensive authentication of all post-secondary academic achievements, including Bachelor's, Master's, PhDs, and higher academic diplomas from local universities and registered higher education institutes.
             </p>
           </div>
 
           {/* Use Cases Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Prevent Resume Fraud */}
+            {/* Credential Fraud */}
             <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-all">
               <div className="w-12 h-12 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-[var(--color-primary)]" />
               </div>
               <h3 className="text-xl font-semibold mb-2">
-                Prevent Résumé Fraud
+                Fight Credential Fraud
               </h3>
               <p className="text-gray-600">
-                Detect false educational claims and protect your organization
-                from dishonest candidates.
+                Designed to protect you from the global surge in diploma mills and unaccredited degree-offering institutions.
               </p>
             </div>
 
-            {/* Comply with Regulations */}
+            {/* Local & Affiliated */}
+            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-all">
+              <div className="w-12 h-12 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-4">
+                <Building2 className="w-6 h-6 text-[var(--color-primary)]" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">
+                Local & Affiliated Coverage
+              </h3>
+              <p className="text-gray-600">
+                Covers qualifications from any currently existing local university or registered higher education institute, including active affiliated bodies operating within Sri Lanka.
+              </p>
+            </div>
+
+            {/* Transparent Pricing */}
             <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-all">
               <div className="w-12 h-12 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-4">
                 <BadgeCheck className="w-6 h-6 text-[var(--color-primary)]" />
               </div>
               <h3 className="text-xl font-semibold mb-2">
-                Comply with Industry Regulations
+                100% Transparent Pricing
               </h3>
               <p className="text-gray-600">
-                Meet regulatory requirements for industries that mandate
-                educational verification.
-              </p>
-            </div>
-
-            {/* Maintain Hiring Standards */}
-            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-all">
-              <div className="w-12 h-12 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-[var(--color-primary)]" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">
-                Maintain Hiring Standards
-              </h3>
-              <p className="text-gray-600">
-                Ensure all employees meet the educational requirements for their
-                roles.
+                Fast, seamless processing with no hidden margins. Any official verification fees levied by the institution are fully disclosed and reimbursed by the client.
               </p>
             </div>
           </div>
@@ -139,30 +132,28 @@ function AcademicVerificationPage() {
               </h2>
 
               <ul className="space-y-6">
-                {/* Institution Name */}
-                <li className="flex items-start gap-4">
-                  <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
-                    <Building2 className="w-5 h-5 text-[var(--color-primary)]" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold">Institution Name</h3>
-                    <p className="text-gray-600 mt-1">
-                      Verify the authenticity and accreditation status of
-                      educational institutions.
-                    </p>
-                  </div>
-                </li>
-
-                {/* Degree Type */}
+                {/* Degree Level */}
                 <li className="flex items-start gap-4">
                   <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
                     <GraduationCap className="w-5 h-5 text-[var(--color-primary)]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold">Degree Type</h3>
+                    <h3 className="text-lg font-semibold">Degree Level & Qualification Type</h3>
                     <p className="text-gray-600 mt-1">
-                      Confirm diploma, bachelor's, master's, doctorate, and
-                      professional certifications.
+                      Bachelor's, Master's, PhDs, and higher academic diplomas — all authenticated at the post-secondary level.
+                    </p>
+                  </div>
+                </li>
+
+                {/* Institution */}
+                <li className="flex items-start gap-4">
+                  <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
+                    <Building2 className="w-5 h-5 text-[var(--color-primary)]" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold">Institution & Affiliated Bodies</h3>
+                    <p className="text-gray-600 mt-1">
+                      Local universities, registered higher education institutes, and their active affiliated bodies operating within Sri Lanka.
                     </p>
                   </div>
                 </li>
@@ -173,42 +164,22 @@ function AcademicVerificationPage() {
                     <BadgeCheck className="w-5 h-5 text-[var(--color-primary)]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold">
-                      Year of Graduation
-                    </h3>
+                    <h3 className="text-lg font-semibold">Year of Graduation</h3>
                     <p className="text-gray-600 mt-1">
-                      Validate completion dates and duration of academic
-                      programs.
+                      Validate completion dates and duration of academic programs to rule out fabricated timelines.
                     </p>
                   </div>
                 </li>
 
-                {/* Enrollment Dates */}
+                {/* Course/Field */}
                 <li className="flex items-start gap-4">
                   <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
-                    <FileText className="w-5 h-5 text-[var(--color-primary)]" />
+                    <BookOpen className="w-5 h-5 text-[var(--color-primary)]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold">Enrollment Dates</h3>
+                    <h3 className="text-lg font-semibold">Field of Study & Course Details</h3>
                     <p className="text-gray-600 mt-1">
-                      Cross-reference start and end dates of academic enrollment
-                      periods.
-                    </p>
-                  </div>
-                </li>
-
-                {/* Country of Education */}
-                <li className="flex items-start gap-4">
-                  <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
-                    <Globe className="w-5 h-5 text-[var(--color-primary)]" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold">
-                      Country of Education
-                    </h3>
-                    <p className="text-gray-600 mt-1">
-                      Verify international qualifications and their local
-                      equivalencies.
+                      Confirm the specific program and field of study claimed by the candidate.
                     </p>
                   </div>
                 </li>
@@ -217,10 +188,10 @@ function AcademicVerificationPage() {
               {/* Action buttons */}
               <div className="flex mt-8 justify-center gap-4">
                 <CTA_Buttons
-                  primaryText="Sign up"
-                  primaryHref=""
+                  primaryText="Start Verifying"
+                  primaryHref="/contact"
                   secondaryText="Talk to Sales"
-                  secondaryHref=""
+                  secondaryHref="/contact"
                 />
               </div>
             </div>
@@ -259,77 +230,60 @@ function AcademicVerificationPage() {
             {/* Right Column - Content */}
             <div className="lg:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our{" "}
+                Direct &{" "}
                 <span className="text-[var(--color-primary)]">
-                  Verification Methods
+                  Compliant Validation
                 </span>
               </h2>
+              <p className="text-gray-600 text-lg mb-8">
+                Verifications are conducted directly via official email or formal letter, strictly adhering to the specific verification and data-privacy policies of the respective university or institute.
+              </p>
 
               <div className="space-y-6">
-                {/* API-based checks */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
-                    <Zap className="w-5 h-5 text-[var(--color-primary)]" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold flex items-center gap-2">
-                      API-based Automated Checks
-                      <CheckCircle className="w-5 h-5 text-[var(--color-success)]" />
-                    </h3>
-                    <p className="text-gray-600 mt-2">
-                      Instant verification through direct integration with
-                      university databases.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Email/Phone verification */}
+                {/* Official Email/Letter */}
                 <div className="flex items-start gap-4">
                   <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
                     <Mail className="w-5 h-5 text-[var(--color-primary)]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold flex items-center gap-2">
-                      Email or Phone Verification
+                      Official Email or Formal Letter
                       <CheckCircle className="w-5 h-5 text-[var(--color-success)]" />
                     </h3>
                     <p className="text-gray-600 mt-2">
-                      Direct contact with registrar offices for manual
-                      verification when needed.
+                      All verifications initiated through official institutional communication channels — no informal shortcuts.
                     </p>
                   </div>
                 </div>
 
-                {/* Document verification */}
+                {/* Data Privacy Compliance */}
+                <div className="flex items-start gap-4">
+                  <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
+                    <ShieldCheck className="w-5 h-5 text-[var(--color-primary)]" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold flex items-center gap-2">
+                      Data-Privacy Policy Adherence
+                      <CheckCircle className="w-5 h-5 text-[var(--color-success)]" />
+                    </h3>
+                    <p className="text-gray-600 mt-2">
+                      Strictly compliant with the specific verification and data-privacy policies of each respective university or institute.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Document authentication */}
                 <div className="flex items-start gap-4">
                   <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
                     <FileSearch className="w-5 h-5 text-[var(--color-primary)]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold flex items-center gap-2">
-                      Document Verification
+                      Certificate Authentication
                       <CheckCircle className="w-5 h-5 text-[var(--color-success)]" />
                     </h3>
                     <p className="text-gray-600 mt-2">
-                      Authentication of certificates, transcripts, and official
-                      documents.
-                    </p>
-                  </div>
-                </div>
-
-                {/* AI-powered validation */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
-                    <Search className="w-5 h-5 text-[var(--color-primary)]" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold flex items-center gap-2">
-                      AI-powered Document Validation
-                      <CheckCircle className="w-5 h-5 text-[var(--color-success)]" />
-                    </h3>
-                    <p className="text-gray-600 mt-2">
-                      Advanced technology to detect fraudulent or altered
-                      documents.
+                      Authentication of certificates, transcripts, and official academic documents from issuing institutions.
                     </p>
                   </div>
                 </div>
@@ -611,9 +565,9 @@ function AcademicVerificationPage() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <CTA_Buttons
                 primaryText="Start Verifying"
-                primaryHref=""
+                primaryHref="/contact"
                 secondaryText="Contact Sales"
-                secondaryHref=""
+                secondaryHref="/contact"
               />
             </div>
           </div>

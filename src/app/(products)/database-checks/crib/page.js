@@ -33,24 +33,24 @@ function page() {
 ];
 
 const checkItems = [
-    { icon: Star, title: "Credit Score and Rating", desc: "Comprehensive credit assessment" },
-    { icon: CreditCard, title: "Credit Card & Loan History", desc: "Detailed repayment patterns" },
-    { icon: Building2, title: "Bank Loans & Facilities", desc: "Overdrafts and credit facilities" },
-    { icon: FileText, title: "Default Records", desc: "Historical payment defaults" },
-    { icon: Eye, title: "Institution Inquiries", desc: "Other financial institution checks" }
+    { icon: Star, title: "Financial Integrity Profile", desc: "Evaluates credit scores, active credit facilities, repayment histories, and overall debt-to-income indicators" },
+    { icon: CreditCard, title: "Credit Facilities & Repayment History", desc: "Detailed review of loan repayment behaviors and active credit facilities" },
+    { icon: Building2, title: "Non-Performing Loans & Defaults", desc: "Flags major payment defaults and non-performing loans that expose your organization to risk" },
+    { icon: FileText, title: "Bankruptcy Records", desc: "Identifies any bankruptcy filings or significant financial failures in the candidate's history" },
+    { icon: Eye, title: "Debt-to-Income Indicators", desc: "Assesses overall financial liability levels relative to income for suitability screening" }
   ];
 
   const benefits = [
-    { icon: TrendingUp, title: "Smarter Decisions", desc: "Make informed lending and hiring choices" },
-    { icon: Shield, title: "Reduce Fraud Risk", desc: "Minimize financial fraud exposure" },
-    { icon: CheckCircle, title: "Role Suitability", desc: "Ensure financial position compatibility" },
-    { icon: Lock, title: "Stay Compliant", desc: "Meet finance-sector regulations" }
+    { icon: TrendingUp, title: "Protect Your Capital", desc: "Safeguard corporate funds by ensuring financial integrity in roles that handle money" },
+    { icon: Shield, title: "Mitigate Insider Threat", desc: "Reduce bribery risks and conflicts of interest from financially distressed employees" },
+    { icon: CheckCircle, title: "Ensure Fiscal Responsibility", desc: "Verify that key personnel are financially stable and capable of managing corporate resources" },
+    { icon: Lock, title: "Authorized & Compliant", desc: "Conducted via certified local credit bureaus (CRIB Sri Lanka) with full data-privacy compliance" }
   ];
 
   const verificationSteps = [
-    { icon: Database, title: "Official Integration", desc: "Direct CRIB database/API access" },
-    { icon: FileText, title: "Consent-Based Access", desc: "Digital signature authorization" },
-    { icon: Clock, title: "Real-Time Processing", desc: "Instant request and retrieval" }
+    { icon: Database, title: "Certified Bureau Access", desc: "Direct access via the Credit Information Bureau of Sri Lanka (CRIB) or official international financial registries" },
+    { icon: FileText, title: "Authenticated Reports", desc: "Verified, official CRIB statements and certificates — not informal or self-reported documents" },
+    { icon: Clock, title: "Legally Compliant Process", desc: "Conducted legally and securely with full data-privacy compliance throughout" }
   ];
   return (
     <>
@@ -63,24 +63,23 @@ const checkItems = [
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
-                  Access Accurate{" "}
+                  Protect Your Capital &{" "}
                   <span className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] bg-clip-text text-transparent">
-                    CRIB Reports
+                    Mitigate Insider Risk
                   </span>{" "}
-                  for Informed Financial Decisions
+                  with Credit Report Verification
                 </h1>
                 <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl leading-relaxed">
-                  Verify an individual's credit history, outstanding loans, and
-                  financial behavior from trusted national credit bureaus.
+                  VERIFIEZE's Credit Report Check provides a comprehensive look into a candidate's credit history, repayment behaviors, and financial liabilities — your strongest defense when hiring for roles handling corporate funds or core management decisions.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <CTA_Buttons
                   primaryText="Start CRIB Check"
-                  primaryHref=""
-                  secondaryText="Request Access"
-                  secondaryHref=""
+                  primaryHref="/contact"
+                  secondaryText="Talk to Sales"
+                  secondaryHref="/contact"
                 />
               </div>
             </div>
@@ -142,17 +141,17 @@ const checkItems = [
                 <FileSearch className="w-6 h-6" />
               </div> */}
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                What is{" "}
+                Credit Report{" "}
                 <span className="text-[var(--color-primary)]">
-                  CRIB Verification
+                  Verification (CRIB)
                 </span>
                 
               </h2>
-              <p className="text-lg text-gray-600 mb-6 max-w-3xl mx-auto">
-                CRIB (Credit Information Bureau) verification provides a report
-                on a person's or entity's financial reliability, loan repayment
-                behavior, and existing liabilities through official credit
-                bureau data.
+              <p className="text-lg text-gray-600 mb-4">
+                For the continued success of a business, financial integrity, insider risk reduction, and corporate accountability are mandatory factors. VERIFIEZE's Credit Report Check provides a comprehensive look into a candidate's credit history, repayment behaviors, and financial liabilities by utilizing verified, official CRIB reports.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                This crucial screening tool is your strongest defense when hiring for roles handling corporate funds, sensitive financial data, or core management decisions.
               </p>
               <div className="bg-[var(--color-primary-light)] rounded-xl p-6 border border-[var(--color-primary)] border-opacity-20">
                 <h3 className="font-semibold text-[var(--color-primary)] mb-3">
@@ -162,16 +161,16 @@ const checkItems = [
                   {[
                     {
                       icon: <Landmark className="w-5 h-5" />,
-                      text: "Banks & lenders",
+                      text: "Corporate & Financial Roles",
                     },
                     {
                       icon: <Briefcase className="w-5 h-5 " />,
-                      text: "Employers",
+                      text: "Management Positions",
                     },
-                    { icon: <Home className="w-5 h-5" />, text: "Landlords" },
+                    { icon: <Home className="w-5 h-5" />, text: "Fund Handlers" },
                     {
                       icon: <Building2 className="w-5 h-5" />,
-                      text: "Insurance",
+                      text: "Senior Leadership",
                     },
                   ].map((item, index) => (
                     <div key={index} className="flex items-center gap-2">
@@ -192,10 +191,15 @@ const checkItems = [
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16" >
-            Trusted By <span className="text-[var(--color-primary)]" >Industry Leaders </span>
+            Roles That Need <span className="text-[var(--color-primary)]" >CRIB Screening</span>
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {usedByItems.map((item, index) => (
+            {[
+              { icon: Building2, title: "Corporate Fund Managers", desc: "Roles directly handling company capital"},
+              { icon: Briefcase, title: "Finance & Accounting", desc: "CFOs, accountants, financial controllers" },
+              { icon: Home, title: "Senior Management", desc: "C-suite and leadership positions" },
+              { icon: Shield, title: "Data & Risk Officers", desc: "Roles with access to sensitive financial data" }
+            ].map((item, index) => (
                 <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center group">
                      <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[var(--color-primary)] transition-colors">
                   <item.icon className="w-8 h-8 text-[var(--color-primary)] group-hover:text-white transition-colors" />
@@ -211,7 +215,8 @@ const checkItems = [
     {/* What We Check Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">Comprehensive <span className="text-[var(--color-primary)]" >Financial Verification </span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">Product <span className="text-[var(--color-primary)]" >Scope </span></h2>
+          <p className="text-center text-gray-600 text-lg mb-16 max-w-3xl mx-auto">A comprehensive financial integrity profile that flags risks before they enter your organization.</p>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -265,7 +270,8 @@ const checkItems = [
       {/* Verification Methods */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">How We <span className="text-[var(--color-primary)]">Verify</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">Authorized & <span className="text-[var(--color-primary)]">Compliant Access</span></h2>
+          <p className="text-center text-gray-600 text-lg mb-16 max-w-3xl mx-auto">Conducted legally and securely through certified local credit bureaus and official international financial registries.</p>
           
           <div className="grid md:grid-cols-3 gap-8">
             {verificationSteps.map((step, idx) => (
@@ -344,24 +350,24 @@ const checkItems = [
               <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Local Regulations</h3>
-              <p className="text-gray-600">Fully compliant with CRIB Act in Sri Lanka and local financial regulations</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">CRIB Sri Lanka</h3>
+              <p className="text-gray-600">Fully compliant with the Credit Information Bureau of Sri Lanka — the official, authorized source for credit reports</p>
             </div>
 
             <div className="bg-gradient-to-br from-[var(--color-primary-light)] to-white rounded-2xl p-8 text-center">
               <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Privacy Protection</h3>
-              <p className="text-gray-600">GDPR & CCPA-aligned consent workflow ensures user privacy protection</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Data-Privacy Compliant</h3>
+              <p className="text-gray-600">Full data-privacy compliance throughout the process, with all access conducted legally and securely</p>
             </div>
 
             <div className="bg-gradient-to-br from-[var(--color-primary-light)] to-white rounded-2xl p-8 text-center">
               <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Lock className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Data Encryption</h3>
-              <p className="text-gray-600">AES-256 encryption ensures maximum security for all financial data</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">International Registries</h3>
+              <p className="text-gray-600">Also covers official international financial registries for candidates with overseas financial histories</p>
             </div>
           </div>
         </div>
@@ -384,9 +390,9 @@ const checkItems = [
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <CTA_Buttons
                 primaryText="Start Verifying"
-                primaryHref=""
+                primaryHref="/contact"
                 secondaryText="Talk to Sales"
-                secondaryHref=""
+                secondaryHref="/contact"
               />
             </div>
           </div>

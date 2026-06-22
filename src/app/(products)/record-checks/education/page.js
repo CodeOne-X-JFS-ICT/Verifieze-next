@@ -42,24 +42,24 @@ function EducationVerificationPage() {
 
         <div className="container mx-auto px-4 py-20 md:py-28 lg:py-32 text-center relative z-10">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Verify G.C.E. O/L and A/L Results with
+            Foundational School-Level
             <br />
             <span className="text-[var(--color-primary)]">
-              Confidence
+              Educational Verification
             </span>
           </h1>
 
           <p className="text-xl mb-8 text-gray-600 max-w-4xl mx-auto">
-            Ensure your candidates meet essential education requirements with reliable verification of school-level qualifications through trusted sources like the Department of Examinations.
+            Verify O/L and A/L results with confidence. VERIFIEZE ensures your potential employee is backed by authentic academic roots — proving their foundational dedication and intellectual competence from day one.
           </p>
 
           {/* Action buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <CTA_Buttons
               primaryText="Verify Now"
-              primaryHref=""
+              primaryHref="/contact"
               secondaryText="Talk to an Expert"
-              secondaryHref=""
+              secondaryHref="/contact"
             />
           </div>
         </div>
@@ -71,14 +71,13 @@ function EducationVerificationPage() {
           {/* Section Header */}
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What is{" "}
+              Scope &{" "}
               <span className="text-[var(--color-primary)]">
-                Education Verification
+                Coverage
               </span>
-              ?
             </h2>
             <p className="text-lg text-gray-600">
-              Education verification confirms the authenticity of a candidate's school-level qualifications, such as G.C.E. Ordinary Level (O/L) and Advanced Level (A/L) results. This process checks details like subject grades, examination year, and index number directly with official sources.
+              Verification of standard local secondary education achievements — specifically GCE Ordinary Level (O/L) and GCE Advanced Level (A/L) examination results — as well as equivalent international secondary school certifications (London/Cambridge O/Ls and A/Ls).
             </p>
           </div>
 
@@ -90,25 +89,25 @@ function EducationVerificationPage() {
             viewport={{ once: true, amount: 0.2 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {/* Detect Forged Certificates */}
+            {/* Management Trainees */}
             <FeatureCard
-              icon={ShieldCheck}
-              title="Detect Forged Certificates"
-              description="Identify fake O/L and A/L certificates through official database verification."
+              icon={GraduationCap}
+              title="Management Trainees & Entry-Level Talent"
+              description="Critical for vetting management trainees and entry-level candidates to confirm foundational academic credentials."
             />
 
-            {/* Verify Qualifications */}
+            {/* International Certs */}
+            <FeatureCard
+              icon={Globe}
+              title="Local & International Certificates"
+              description="Covers local O/L & A/L as well as equivalent Cambridge/London international secondary school certifications."
+            />
+
+            {/* Transparent Pricing */}
             <FeatureCard
               icon={BadgeCheck}
-              title="Verify Qualifications"
-              description="Confirm educational qualifications for entry-level roles and hiring decisions."
-            />
-
-            {/* Compliance Standards */}
-            <FeatureCard
-              icon={FileText}
-              title="Compliance Standards"
-              description="Ensure adherence to hiring or licensing standards and regulatory requirements."
+              title="100% Transparent Pricing"
+              description="Fast, seamless processing with no hidden margins. Any official processing fees levied by the examination body are fully disclosed and reimbursed by the client."
             />
           </motion.div>
         </div>
@@ -210,7 +209,7 @@ function EducationVerificationPage() {
         </div>
       </section>
 
-      {/* Verification Methods Section */}
+      {/* Verification Channel Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -218,7 +217,7 @@ function EducationVerificationPage() {
             <div className="lg:w-1/2">
               <div className="relative rounded-xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/verification-methods.jpg"
+                  src="/images/Academic-hero.jpg"
                   alt="Verification methods"
                   width={600}
                   height={400}
@@ -230,69 +229,51 @@ function EducationVerificationPage() {
             {/* Right Column - Content */}
             <div className="lg:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our{" "}
+                Validation{" "}
                 <span className="text-[var(--color-primary)]">
-                  Verification Methods
+                  Channel
                 </span>
               </h2>
+              <p className="text-gray-600 text-lg mb-8">
+                Conducted cleanly and securely through authorized channels to confirm the authenticity of grades, index numbers, and examination years.
+              </p>
 
               <div className="space-y-6">
-                {/* Official Records */}
+                {/* Authorized Channels */}
                 <div className="flex items-start gap-4">
                   <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
                     <FileSearch className="w-5 h-5 text-[var(--color-primary)]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold">
-                      Official Record Matching
-                    </h3>
+                    <h3 className="text-lg font-semibold">Authorized Channel Verification</h3>
                     <p className="text-gray-600 mt-1">
-                      Direct verification via Department of Examinations, Sri Lanka database.
+                      Direct verification via authorized examination departments and issuing bodies for maximum accuracy and security.
                     </p>
                   </div>
                 </div>
 
-                {/* Document Review */}
+                {/* Grades & Index */}
                 <div className="flex items-start gap-4">
                   <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
-                    <FileText className="w-5 h-5 text-[var(--color-primary)]" />
+                    <Award className="w-5 h-5 text-[var(--color-primary)]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold">
-                      Certificate & Document Review
-                    </h3>
+                    <h3 className="text-lg font-semibold">Grades, Index Numbers & Exam Years</h3>
                     <p className="text-gray-600 mt-1">
-                      Thorough examination of original certificates and supporting documents.
+                      Thorough confirmation of subject grades, examination index numbers, and the year of examination.
                     </p>
                   </div>
                 </div>
 
-                {/* Direct Communication */}
+                {/* Transparent Fees */}
                 <div className="flex items-start gap-4">
                   <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
-                    <School className="w-5 h-5 text-[var(--color-primary)]" />
+                    <CheckCircle className="w-5 h-5 text-[var(--color-primary)]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold">
-                      Direct Authority Communication
-                    </h3>
+                    <h3 className="text-lg font-semibold">Fully Transparent Fee Structure</h3>
                     <p className="text-gray-600 mt-1">
-                      Communication with local schools and education authorities for verification.
-                    </p>
-                  </div>
-                </div>
-
-                {/* AI-Assisted Checks */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
-                    <ShieldAlert className="w-5 h-5 text-[var(--color-primary)]" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold">
-                      AI-Assisted Certificate Authenticity
-                    </h3>
-                    <p className="text-gray-600 mt-1">
-                      Advanced AI technology to detect forgeries and document alterations.
+                      Any official processing fees or administrative charges levied by the examination department or issuing body are fully disclosed — with no hidden margins.
                     </p>
                   </div>
                 </div>
@@ -411,15 +392,15 @@ function EducationVerificationPage() {
               Ready to verify G.C.E. results quickly and accurately?
             </h2>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-              Start verifying O/L and A/L qualifications with confidence using our comprehensive education verification service.
+              Start verifying O/L and A/L qualifications with complete confidence — fast, secure, and fully transparent.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <CTA_Buttons
                 primaryText="Start Verifying"
-                primaryHref=""
+                primaryHref="/contact"
                 secondaryText="Contact Sales"
-                secondaryHref=""
+                secondaryHref="/contact"
               />
             </div>
           </div>

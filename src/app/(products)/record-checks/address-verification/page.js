@@ -47,25 +47,24 @@ function AddressVelificationPage() {
 
         <div className="container mx-auto px-4 py-20 md:py-28 lg:py-32 text-center relative z-10">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Instant and Accurate Address Verification to Build
+            Your First Line of Defense Against
             <br />
             <span className="text-[var(--color-primary)]">
-              Trust and Stay Compliant
+              Identity Theft & Payroll Fraud
             </span>
           </h1>
 
           <p className="text-xl mb-8 text-gray-600">
-            Verify residential and official addresses across local and
-            international regions in seconds
+            In an era of hybrid setups and remote onboarding, VERIFIEZE's Address Verification service authenticates a candidate's true geographic footprint — giving you a secure foundation for corporate compliance, legal accountability, and risk management.
           </p>
 
           {/* Action buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <CTA_Buttons
-              primaryText="Get Started"
-              primaryHref=""
-              secondaryText="Takl to Sales"
-              secondaryHref=""
+              primaryText="Start Verifying"
+              primaryHref="/contact"
+              secondaryText="Talk to Sales"
+              secondaryHref="/contact"
             />
           </div>
         </div>
@@ -76,16 +75,13 @@ function AddressVelificationPage() {
           {/* Section Header */}
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What is{" "}
+              Address{" "}
               <span className="text-[var(--color-primary)]">
-                Address Verification
+                Verification
               </span>
-              ?
             </h2>
             <p className="text-lg text-gray-600">
-              Address verification is the process of validating a candidate’s
-              residential or business address to ensure identity accuracy and
-              regulatory compliance.
+              Ensuring your employee records are 100% accurate is critical in today's hybrid and remote onboarding environment. We verify either the candidate's current residential address or their permanent address to match your specific risk management needs.
             </p>
           </div>
 
@@ -97,32 +93,32 @@ function AddressVelificationPage() {
             viewport={{ once: true, amount: 0.2 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
-            {/* Identity Verification */}
+            {/* Identity Theft */}
             <FeatureCard
               icon={Fingerprint}
-              title="Identity Verification"
-              description="Confirm the authenticity of provided addresses against government databases."
+              title="Prevent Identity Theft"
+              description="Authenticate a candidate's true geographic footprint to guard against synthetic identities."
             />
 
-            {/* Fraud Prevention */}
+            {/* Payroll Fraud */}
             <FeatureCard
               icon={ShieldCheck}
-              title="Fraud Prevention"
-              description="Detect synthetic identities or fake addresses used for fraudulent applications."
+              title="Stop Payroll Fraud"
+              description="Ensure employee records are accurate and prevent fraudulent payroll claims from fictitious addresses."
             />
 
-            {/* Background Checks */}
+            {/* Corporate Compliance */}
             <FeatureCard
               icon={FileSearch}
-              title="Background Checks"
-              description="Validate residential history for employment or tenant screening."
+              title="Corporate Compliance"
+              description="Build a secure foundation for corporate compliance, legal accountability, and risk management."
             />
 
-            {/* KYC Compliance */}
+            {/* Current or Permanent */}
             <FeatureCard
               icon={BadgeCheck}
-              title="KYC Compliance"
-              description="Meet financial regulations by verifying customer addresses."
+              title="Current or Permanent Address"
+              description="Choose to verify the candidate's current residential address or their permanent address based on your needs."
             />
           </motion.div>
         </div>
@@ -130,107 +126,79 @@ function AddressVelificationPage() {
 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            {/* Left Column - Bullet Points */}
-            <div></div>
-            <div className="lg:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                Why{" "}
-                <span className="text-[var(--color-primary)]">
-                  Address Verification
-                </span>{" "}
-                Matters
-              </h2>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Two Distinct{" "}
+              <span className="text-[var(--color-primary)]">
+                Verification Options
+              </span>
+            </h2>
+            <p className="text-lg text-gray-600">
+              Choose the option that aligns with your risk management requirements — swift data-driven or thorough on-site verification.
+            </p>
+          </div>
 
-              <ul className="space-y-6">
-                {/* Identity Fraud */}
-                <li className="flex items-start gap-4">
-                  <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
-                    <ShieldAlert className="w-5 h-5 text-[var(--color-primary)]" />
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Option 1 */}
+            <div className="flex-1 bg-white rounded-2xl shadow-lg p-8 border-t-4 border-[var(--color-primary)]">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-[var(--color-primary)] rounded-full flex items-center justify-center text-white font-bold text-lg">1</div>
+                <h3 className="text-2xl font-bold text-gray-900">Record Verification</h3>
+              </div>
+              <p className="text-gray-600 mb-6 text-base leading-relaxed">
+                A swift, data-driven audit that cross-checks and authenticates the candidate's address against a minimum of two highly reliable government sources, including official records and other authoritative state databases.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <div className="bg-[var(--color-primary-light)] p-1.5 rounded-full mt-0.5">
+                    <ShieldAlert className="w-4 h-4 text-[var(--color-primary)]" />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold">
-                      Reduces the risk of identity fraud
-                    </h3>
-                    <p className="text-gray-600 mt-1">
-                      Prevents synthetic identities by confirming physical
-                      address existence.
-                    </p>
-                  </div>
+                  <span className="text-gray-700">Minimum two government sources cross-checked</span>
                 </li>
-
-                {/* Traceability */}
-                <li className="flex items-start gap-4">
-                  <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
-                    <MapPin className="w-5 h-5 text-[var(--color-primary)]" />
+                <li className="flex items-start gap-3">
+                  <div className="bg-[var(--color-primary-light)] p-1.5 rounded-full mt-0.5">
+                    <FileText className="w-4 h-4 text-[var(--color-primary)]" />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold">
-                      Ensures candidates are traceable
-                    </h3>
-                    <p className="text-gray-600 mt-1">
-                      Validates legitimate locations for legal or employment
-                      purposes.
-                    </p>
-                  </div>
+                  <span className="text-gray-700">Official records and authoritative state databases</span>
                 </li>
-
-                {/* Compliance */}
-                <li className="flex items-start gap-4">
-                  <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
-                    <FileText className="w-5 h-5 text-[var(--color-primary)]" />
+                <li className="flex items-start gap-3">
+                  <div className="bg-[var(--color-primary-light)] p-1.5 rounded-full mt-0.5">
+                    <CheckCircle className="w-4 h-4 text-[var(--color-primary)]" />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold">
-                      Required for financial & legal compliance
-                    </h3>
-                    <p className="text-gray-600 mt-1">
-                      Meets KYC/AML regulations for banks and government
-                      institutions.
-                    </p>
-                  </div>
-                </li>
-
-                {/* Logistics */}
-                <li className="flex items-start gap-4">
-                  <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
-                    <Truck className="w-5 h-5 text-[var(--color-primary)]" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold">
-                      Supports accurate logistics and onboarding
-                    </h3>
-                    <p className="text-gray-600 mt-1">
-                      Ensures correct delivery locations and employee residency
-                      verification.
-                    </p>
-                  </div>
+                  <span className="text-gray-700">Fast turnaround — ideal for high-volume screening</span>
                 </li>
               </ul>
-
-              {/* Action buttons */}
-              <div className="flex mt-8 justify-center gap-4">
-                <CTA_Buttons
-                  primaryText="Get Started"
-                  primaryHref=""
-                  secondaryText="Takl to Sales"
-                  secondaryHref=""
-                />
-              </div>
             </div>
 
-            <div className="lg:w-1/2">
-              <div className="relative rounded-xl overflow-hidden shadow-lg">
-                <Image
-                  src="/images/Address Checks.jpg"
-                  alt="Address verification importance"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto"
-                />
-                {/* Optional decorative overlay */}
-                {/* <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/20 to-transparent"></div> */}
+            {/* Option 2 */}
+            <div className="flex-1 bg-white rounded-2xl shadow-lg p-8 border-t-4 border-[var(--color-primary-dark)]">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-[var(--color-primary-dark)] rounded-full flex items-center justify-center text-white font-bold text-lg">2</div>
+                <h3 className="text-2xl font-bold text-gray-900">Physical Verification</h3>
               </div>
+              <p className="text-gray-600 mb-6 text-base leading-relaxed">
+                An on-site field audit where a professional agent physically visits the location to confirm residency and local standing. The most thorough form of address verification available.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <div className="bg-[var(--color-primary-light)] p-1.5 rounded-full mt-0.5">
+                    <MapPin className="w-4 h-4 text-[var(--color-primary)]" />
+                  </div>
+                  <span className="text-gray-700">Professional agent physically visits the location</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="bg-[var(--color-primary-light)] p-1.5 rounded-full mt-0.5">
+                    <Home className="w-4 h-4 text-[var(--color-primary)]" />
+                  </div>
+                  <span className="text-gray-700">Confirms residency and local community standing</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="bg-[var(--color-primary-light)] p-1.5 rounded-full mt-0.5">
+                    <Truck className="w-4 h-4 text-[var(--color-primary)]" />
+                  </div>
+                  <span className="text-gray-700">Fully available across the Western Province (WP)</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -244,90 +212,71 @@ function AddressVelificationPage() {
               <div className="relative rounded-xl overflow-hidden shadow-lg">
                 <Image
                   src="/images/Address Checks.jpg"
-                  alt="Address verification importance"
+                  alt="Address verification coverage"
                   width={600}
                   height={400}
                   className="w-full h-auto"
                 />
-                {/* Optional decorative overlay */}
-                {/* <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/20 to-transparent"></div> */}
               </div>
             </div>
 
-            {/* Right Column - Content */}
+            {/* Right Column - Coverage */}
             <div className="lg:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Comprehensive{" "}
+                Coverage &{" "}
                 <span className="text-[var(--color-primary)]">
-                  Address Checks
+                  Geographic Scope
                 </span>
               </h2>
+              <p className="text-gray-600 text-lg mb-8">
+                Physical Verification is fully available across the Western Province (WP). Custom coverage and pricing for other provinces is provided upon request.
+              </p>
 
               <div className="space-y-6">
-                {/* Current Residential */}
-                <div className="flex items-start gap-4">
-                  <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
-                    <Home className="w-5 h-5 text-[var(--color-primary)]" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold flex items-center gap-2">
-                      Current Residental Address
-                      <CheckCircle className="w-5 h-5 text-[var(--color-success)]" />
-                    </h3>
-                    <p className="text-gray-600 mt-2">
-                      Real-time validation of where the candidate currently
-                      resides.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Permanent Address */}
+                {/* Western Province */}
                 <div className="flex items-start gap-4">
                   <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
                     <MapPin className="w-5 h-5 text-[var(--color-primary)]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold flex items-center gap-2">
-                      Permanent Address
+                      Western Province — Fully Covered
                       <CheckCircle className="w-5 h-5 text-[var(--color-success)]" />
                     </h3>
                     <p className="text-gray-600 mt-2">
-                      Verification of long-term residency for legal
-                      documentation.
+                      Full physical verification coverage across Colombo, Gampaha, and Kalutara districts.
                     </p>
                   </div>
                 </div>
 
-                {/* Business Address */}
+                {/* Other Provinces */}
                 <div className="flex items-start gap-4">
                   <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
-                    <Briefcase className="w-5 h-5 text-[var(--color-primary)]" />
+                    <Truck className="w-5 h-5 text-[var(--color-primary)]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold flex items-center gap-2">
-                      Business/Office Address
+                      Other Provinces — On Request
                       <CheckCircle className="w-5 h-5 text-[var(--color-success)]" />
                     </h3>
                     <p className="text-gray-600 mt-2">
-                      Confirmation of commercial locations for corporate
-                      agreements.
+                      Custom coverage and pricing for all other provinces provided upon request.
                     </p>
                   </div>
                 </div>
 
-                {/* Utility Verification */}
+                {/* Record Verification */}
                 <div className="flex items-start gap-4">
                   <div className="bg-[var(--color-primary-light)] p-2 rounded-full">
-                    <FileText className="w-5 h-5 text-[var(--color-primary)]" />
+                    <Home className="w-5 h-5 text-[var(--color-primary)]" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold flex items-center gap-2">
-                      Utility Bill Verification
+                      Record Verification — Nationwide
                       <CheckCircle className="w-5 h-5 text-[var(--color-success)]" />
                     </h3>
                     <p className="text-gray-600 mt-2">
-                      Cross-referencing with CEB/LECO bills for enhanced
-                      validation.
+                      Data-driven record checks available for addresses nationwide via official government databases.
                     </p>
                   </div>
                 </div>
@@ -363,10 +312,10 @@ function AddressVelificationPage() {
 
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <CTA_Buttons
-                primaryText="Start Now"
-                primaryHref=""
-                secondaryText="Request Live Demo"
-                secondaryHref=""
+                primaryText="Start Verifying"
+                primaryHref="/contact"
+                secondaryText="Talk to Sales"
+                secondaryHref="/contact"
               />
             </div>
           </div>
