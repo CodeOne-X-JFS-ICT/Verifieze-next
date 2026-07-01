@@ -308,58 +308,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our{" "}
-              <span className="text-[var(--color-primary)]">
-                Verification Services
-              </span>
-            </h2>
-            <p className="text-lg text-gray-600">
-              Comprehensive verification solutions designed to meet all your compliance 
-              and security needs
-            </p>
-          </div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
-            {services.map((service, index) => (
-              <Link
-                key={index}
-                href={service.href}
-                className="group bg-gray-50 p-8 rounded-xl hover:bg-[var(--color-primary-light)] transition-all duration-300 hover:shadow-lg"
-              >
-                <div className="flex items-start gap-6">
-                  <div className="bg-white p-3 rounded-lg group-hover:bg-[var(--color-primary)] transition-colors duration-300">
-                    <service.icon className="w-8 h-8 text-[var(--color-primary)] group-hover:text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[var(--color-primary)]">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                      {service.description}
-                    </p>
-                    <div className="flex items-center text-[var(--color-primary)] font-semibold">
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
       {/* Trust & Security Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
