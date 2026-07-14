@@ -25,12 +25,28 @@ import { motion } from "framer-motion";
 import { containerVariants } from "@/animations/variants";
 
 export default function Contact() {
+  const serviceOptions = [
+    'Address Verification',
+    'Academic',
+    'Professional Qualifications',
+    'Employment',
+    'Education',
+    'Identity',
+    'Driving Qualifications',
+    'CRIB',
+    'Anti Money Laundering',
+    'Basic Criminal Clearance',
+    'Advanced Criminal Clearance',
+    'Referees',
+    'Character Confirmations',
+  ];
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
-    service: '',
+    services: [],
     message: ''
   });
 
@@ -42,6 +58,15 @@ export default function Contact() {
     setFormData(prev => ({
       ...prev,
       [name]: value
+    }));
+  };
+
+  const handleServiceToggle = (option) => {
+    setFormData(prev => ({
+      ...prev,
+      services: prev.services.includes(option)
+        ? prev.services.filter(s => s !== option)
+        : [...prev.services, option]
     }));
   };
 
@@ -61,7 +86,7 @@ export default function Contact() {
 
       if (res.ok && data.success) {
         setSubmitStatus('success');
-        setFormData({ name: '', email: '', company: '', phone: '', service: '', message: '' });
+        setFormData({ name: '', email: '', company: '', phone: '', services: [], message: '' });
       } else {
         setSubmitStatus('error');
         console.error('Contact form error:', data.error);
@@ -302,24 +327,50 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 mb-3">
                     Service Interest
+                    {formData.services.length > 0 && (
+                      <span className="ml-2 text-xs font-semibold text-white bg-[var(--color-primary)] px-2 py-0.5 rounded-full">
+                        {formData.services.length} selected
+                      </span>
+                    )}
                   </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-colors"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="background-verification">Background Verification</option>
-                    <option value="address-verification">Address Verification</option>
-                    <option value="phone-verification">Phone Verification</option>
-                    <option value="company-verification">Company Verification</option>
-                    <option value="api-integration">API Integration</option>
-                    <option value="enterprise-solution">Enterprise Solution</option>
-                  </select>
+                  <div className="border border-gray-300 rounded-lg p-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {serviceOptions.map((option) => {
+                      const isChecked = formData.services.includes(option);
+                      return (
+                        <label
+                          key={option}
+                          className={`flex items-center gap-3 cursor-pointer rounded-lg px-3 py-2 transition-colors ${
+                            isChecked
+                              ? 'bg-[var(--color-primary-light)] text-[var(--color-primary)]'
+                              : 'hover:bg-gray-50 text-gray-700'
+                          }`}
+                        >
+                          <div
+                            className={`w-5 h-5 flex-shrink-0 rounded border-2 flex items-center justify-center transition-all ${
+                              isChecked
+                                ? 'bg-[var(--color-primary)] border-[var(--color-primary)]'
+                                : 'border-gray-300 bg-white'
+                            }`}
+                            onClick={() => handleServiceToggle(option)}
+                          >
+                            {isChecked && (
+                              <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                              </svg>
+                            )}
+                          </div>
+                          <span
+                            className="text-sm font-medium select-none"
+                            onClick={() => handleServiceToggle(option)}
+                          >
+                            {option}
+                          </span>
+                        </label>
+                      );
+                    })}
+                  </div>
                 </div>
 
                 <div>

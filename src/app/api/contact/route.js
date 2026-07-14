@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { name, email, company, phone, service, message } = body;
+    const { name, email, company, phone, services, message } = body;
 
     // ── Basic server-side validation ──────────────────────────────────────
     if (!name || !email || !message) {
@@ -22,6 +22,14 @@ export async function POST(request) {
       );
     }
 
+    // Format services list for email
+    const servicesHtml = Array.isArray(services) && services.length > 0
+      ? services.map(s => `<li style="margin:2px 0;">${s}</li>`).join('')
+      : '<li>—</li>';
+    const servicesText = Array.isArray(services) && services.length > 0
+      ? services.join(', ')
+      : '—';
+
     // ── Create transporter using env vars (never hardcoded) ───────────────
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -38,7 +46,7 @@ export async function POST(request) {
       from: `"${process.env.SMTP_FROM_NAME}" <${process.env.SMTP_FROM_EMAIL}>`,
       to: process.env.CONTACT_RECEIVER_EMAIL,
       replyTo: email,
-      subject: `New Contact Form Enquiry — ${service || "General"} | ${name}`,
+      subject: `New Contact Form Enquiry — ${servicesText} | ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9;">
           <div style="background: #003366; color: white; padding: 20px; border-radius: 8px 8px 0 0; text-align: center;">
@@ -64,8 +72,10 @@ export async function POST(request) {
                 <td style="padding: 10px 0; border-bottom: 1px solid #f0f0f0; color: #222;">${phone || "—"}</td>
               </tr>
               <tr>
-                <td style="padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-weight: bold; color: #555;">Service Interest</td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #f0f0f0; color: #222;">${service || "—"}</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-weight: bold; color: #555;">Services Interested</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #f0f0f0; color: #222;">
+                  <ul style="margin: 0; padding-left: 16px;">${servicesHtml}</ul>
+                </td>
               </tr>
               <tr>
                 <td style="padding: 10px 0; font-weight: bold; color: #555; vertical-align: top;">Message</td>
