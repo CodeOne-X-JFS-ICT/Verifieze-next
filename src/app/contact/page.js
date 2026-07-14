@@ -35,6 +35,7 @@ export default function Contact() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -47,20 +48,32 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      alert('Thank you for your message! We\'ll get back to you within 24 hours.');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
+    setSubmitStatus(null);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
       });
-    }, 2000);
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', company: '', phone: '', service: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+        console.error('Contact form error:', data.error);
+      }
+    } catch (err) {
+      setSubmitStatus('error');
+      console.error('Network error:', err);
+    } finally {
+      setIsSubmitting(false);
+      // Auto-clear status after 6 seconds
+      setTimeout(() => setSubmitStatus(null), 6000);
+    }
   };
 
   const contactInfo = [
@@ -324,6 +337,21 @@ export default function Contact() {
                     placeholder="Tell us about your verification needs..."
                   />
                 </div>
+
+
+                {/* Status Feedback */}
+                {submitStatus === 'success' && (
+                  <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    <p className="font-medium">Message sent! We'll get back to you within 24 hours. Check your inbox for a confirmation email.</p>
+                  </div>
+                )}
+                {submitStatus === 'error' && (
+                  <div className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+                    <span className="text-red-600 text-lg flex-shrink-0">⚠</span>
+                    <p className="font-medium">Something went wrong. Please try again or email us directly at <a href="mailto:checks@verifieze.com" className="underline">checks@verifieze.com</a></p>
+                  </div>
+                )}
 
                 <button
                   type="submit"
