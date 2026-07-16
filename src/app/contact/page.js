@@ -47,7 +47,8 @@ export default function Contact() {
     company: '',
     phone: '',
     services: [],
-    message: ''
+    message: '',
+    website: '' // Honeypot field for spam prevention
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -86,7 +87,7 @@ export default function Contact() {
 
       if (res.ok && data.success) {
         setSubmitStatus('success');
-        setFormData({ name: '', email: '', company: '', phone: '', services: [], message: '' });
+        setFormData({ name: '', email: '', company: '', phone: '', services: [], message: '', website: '' });
       } else {
         setSubmitStatus('error');
         console.error('Contact form error:', data.error);
@@ -262,6 +263,20 @@ export default function Contact() {
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Honeypot field (invisible to real users, but spam bots will fill it) */}
+                <div className="hidden" aria-hidden="true" style={{ display: 'none' }}>
+                  <label htmlFor="website">Website Link (Leave empty)</label>
+                  <input
+                    type="text"
+                    id="website"
+                    name="website"
+                    value={formData.website}
+                    onChange={handleInputChange}
+                    tabIndex="-1"
+                    autoComplete="off"
+                  />
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">

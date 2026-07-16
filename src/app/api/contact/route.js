@@ -4,7 +4,13 @@ import { NextResponse } from "next/server";
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { name, email, company, phone, services, message } = body;
+    const { name, email, company, phone, services, message, website } = body;
+
+    // ── Honeypot bot protection ──────────────────────────────────────────
+    if (website && website.trim() !== "") {
+      console.warn("Honeypot filled by bot. Silently ignoring submission.");
+      return NextResponse.json({ success: true });
+    }
 
     // ── Basic server-side validation ──────────────────────────────────────
     if (!name || !email || !message) {
