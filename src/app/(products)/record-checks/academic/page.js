@@ -559,7 +559,7 @@ function AcademicVerificationPage() {
             </h2>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
               Start verifying educational credentials from institutions
-              worldwide with confidence and speed using Verifieze.
+              worldwide with confidence and speed using VERIFIEZE.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4">

@@ -198,7 +198,7 @@ export default function Contact() {
               Get in Touch with
               <br />
               <span className="text-[var(--color-primary)]">
-                Verifieze Team
+                VERIFIEZE Team
               </span>
             </h1>
 
@@ -545,7 +545,7 @@ export default function Contact() {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Head Office</h3>
                     <p className="text-gray-600 mb-2">
-                      Verifieze (Pvt) Ltd,<br />
+                      VERIFIEZE (Pvt) Ltd,<br />
                       01 Lake Cres, Colombo 02, Sri Lanka<br />  
                     </p>
                     

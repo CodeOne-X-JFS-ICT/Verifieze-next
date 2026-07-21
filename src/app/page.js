@@ -92,7 +92,7 @@ export default function Home() {
             </h1>
 
             <p className="text-sm md:text-base mb-8 text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Trust should never be left to assumption. At Verifieze, we help organizations make confident hiring and business decisions through fast, accurate, and compliant background verification solutions. From validating credentials and employment history to identifying potential risks, we deliver the trusted insights businesses need to hire smarter, protect their reputation, and remain compliant. Because when facts are verified, confidence follows.
+              Trust should never be left to assumption. At VERIFIEZE, we help organizations make confident hiring and business decisions through fast, accurate, and compliant background verification solutions. From validating credentials and employment history to identifying potential risks, we deliver the trusted insights businesses need to hire smarter, protect their reputation, and remain compliant. Because when facts are verified, confidence follows.
             </p>
 
             {/* Trust Badges */}

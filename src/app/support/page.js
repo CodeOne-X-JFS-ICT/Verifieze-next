@@ -25,7 +25,7 @@ function page() {
                   </h2>
                   <p className="text-gray-600 text-base leading-relaxed">
                     I'm a business and have questions about my existing
-                    Verifieze account.
+                    VERIFIEZE account.
                   </p>
                   <button className="mt-auto inline-flex items-center justify-center gap-2 px-5 py-3 text-white font-semibold bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] rounded-lg transition-all shadow-md hover:shadow-lg">
                     Get Customer Support

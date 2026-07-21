@@ -143,7 +143,7 @@ export default function Navbar() {
               <div className="w-36 h-9 sm:w-45 sm:h-12">
                 <Image
                   src="/images/verifieze-logo.png"
-                  alt="Verifieze Logo"
+                  alt="VERIFIEZE Logo"
                   width={180}
                   height={45}
                   priority

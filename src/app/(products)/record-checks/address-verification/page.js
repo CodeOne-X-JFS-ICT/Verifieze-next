@@ -307,7 +307,7 @@ function AddressVelificationPage() {
             </h2>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
               Start verifying residential, business, and utility addresses with
-              ease and confidence using Verifieze.
+              ease and confidence using VERIFIEZE.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4">
