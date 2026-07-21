@@ -72,8 +72,7 @@ export default function Navbar() {
             { name: 'Data Protection', href: '/compliance/data-protection' },
             { name: 'Finance', href: '/compliance/finance' },
             { name: 'Labour', href: '/compliance/labour' },
-            { name: 'Health and Safety', href: '/compliance/health-and-safety' },
-            { name: 'Biz Continuation', href: '/compliance/biz-continuation' }
+            { name: 'Health and Safety', href: '/compliance/health-and-safety' }
           ]
         }
       ]
