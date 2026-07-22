@@ -36,9 +36,9 @@ function AboutJFSPage() {
       <br></br>
       <br></br>
       {/* Hero image only */}
-      <section className="relative bg-[#030130] overflow-hidden h-[400px] md:h-[500px] lg:h-[600px]">
+      <section className="relative bg-[#fffffff] overflow-hidden h-[400px] md:h-[500px] lg:h-[600px]">
         <div
-          className="absolute inset-0 bg-[url('/images/power-of-x.png')] bg-contain bg-center bg-no-repeat"
+          className="absolute inset-0 bg-[url('/images/power-of-x.jpg')] bg-contain bg-center bg-no-repeat"
           aria-hidden="true"
         />
       </section>

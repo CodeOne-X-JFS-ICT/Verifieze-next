@@ -99,7 +99,7 @@ export default function Navbar() {
         {
           category: '',
           items: [
-            { name: 'ISO', href: '/iso' }
+            { name: 'ISO 27001', href: '/iso' }
           ]
         }
       ]
