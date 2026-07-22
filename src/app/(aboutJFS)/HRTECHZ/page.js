@@ -129,7 +129,7 @@ function AboutJFSPage() {
               </span>
             </h2>
             <p className="text-lg text-gray-600">
-              JFS Holdings manages a diversified portfolio across ICT, BPO, Knowledge Process Management, 
+              HRTECHZ manages a diversified portfolio across ICT, BPO, Knowledge Process Management, 
               and Action Sports through fully owned subsidiaries.
             </p>
           </div>
@@ -146,7 +146,7 @@ function AboutJFSPage() {
             <FeatureCard
               icon={Code}
               title="Information & Communication Technology"
-              description="JFS ICT Services (Pvt) Ltd operating under CodeOne-X brand, delivering innovative digital solutions."
+              description="CODEONE-X TECHNOLOGIES (PRIVATE) LIMITED, delivering innovative digital solutions."
             />
 
             {/* BPO Sector */}
@@ -364,7 +364,7 @@ function AboutJFSPage() {
                       Innovative Digital Solutions
                     </h3>
                     <p className="text-gray-600 mt-1">
-                      JFS ICT Services (Private) Limited operates under the CodeOne-X brand, 
+                      CODEONE-X TECHNOLOGIES (PRIVATE) LIMITED, 
                       delivering cutting-edge digital solutions to clients.
                     </p>
                   </div>
@@ -481,7 +481,7 @@ function AboutJFSPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Partner with JFS Holdings
+              Partner with HRTECHZ
             </h2>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
               Join our growing network of clients and partners. Experience exceptional value 

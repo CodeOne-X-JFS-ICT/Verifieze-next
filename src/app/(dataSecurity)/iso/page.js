@@ -239,7 +239,7 @@ function ISO27001DataSecurityPage() {
               </span>
             </h2>
             <p className="text-lg text-gray-600">
-              JFS Holdings is committed to maintaining the highest standards of information security 
+              HRTECHZ is committed to maintaining the highest standards of information security 
               and data protection for all our clients and stakeholders.
             </p>
           </div>
@@ -252,7 +252,7 @@ function ISO27001DataSecurityPage() {
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">ISO 27001 Compliance</h3>
                 <p className="text-lg text-gray-600 mb-6">
-                  In line with this standard, JFS Holdings prioritizes the protection of all client data. 
+                  In line with this standard, HRTECHZ prioritizes the protection of all client data. 
                   As a BPO services provider specializing in staff augmentation, robust measures are in place 
                   to safeguard sensitive information at every stage. The sister company in the ICT sector is 
                   currently in the final stages of obtaining ISO 27001 certification, further strengthening 
@@ -549,7 +549,7 @@ function ISO27001DataSecurityPage() {
               Secure Your Data with Confidence
             </h2>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-              Partner with JFS Holdings for secure, compliant, and reliable BPO services. 
+              Partner with HRTECHZ for secure, compliant, and reliable BPO services. 
               Our ISO 27001-aligned security framework ensures your data remains protected 
               at all times.
             </p>

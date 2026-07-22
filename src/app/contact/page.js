@@ -107,7 +107,7 @@ export default function Contact() {
       icon: Phone,
       title: "Phone Support",
       details: ["+94 112 746 010"],
-      subtitle: "Mon-Fri 9AM-6PM, Sat 9AM-2PM"
+      subtitle: "Mon-Fri 8AM-5PM"
     },
     {
       icon: Mail,
@@ -495,14 +495,10 @@ export default function Contact() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-3 border-b border-gray-200">
                   <span className="font-semibold text-gray-900">Monday - Friday</span>
-                  <span className="text-[var(--color-primary)] font-semibold">9:00 AM - 6:00 PM</span>
+                  <span className="text-[var(--color-primary)] font-semibold">8:00 AM - 5:00 PM</span>
                 </div>
                 <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                  <span className="font-semibold text-gray-900">Saturday</span>
-                  <span className="text-[var(--color-primary)] font-semibold">9:00 AM - 2:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-200">
-                  <span className="font-semibold text-gray-900">Sunday</span>
+                  <span className="font-semibold text-gray-900">Saturday & Sunday</span>
                   <span className="text-gray-500">Closed</span>
                 </div>
                 <div className="flex justify-between items-center py-3">
@@ -545,7 +541,7 @@ export default function Contact() {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Head Office</h3>
                     <p className="text-gray-600 mb-2">
-                      VERIFIEZE (Pvt) Ltd,<br />
+                      VERIFIEZE BIZ SOLUTIONS (PVT) LTD,<br />
                       01 Lake Cres, Colombo 02, Sri Lanka<br />  
                     </p>
                     
