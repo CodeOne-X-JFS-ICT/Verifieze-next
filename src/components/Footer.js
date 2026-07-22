@@ -19,17 +19,11 @@ export default function Footer() {
               Sri Lanka's leading background verification service provider. Delivering fast, accurate, and compliant insights to help you hire smarter.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-gray-400 hover:text-[var(--color-primary)] transition-colors">
+              <Link href="https://www.facebook.com/verifieze" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[var(--color-primary)] transition-colors">
                 <Facebook className="w-5 h-5" />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-[var(--color-primary)] transition-colors">
-                <Twitter className="w-5 h-5" />
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-[var(--color-primary)] transition-colors">
+              <Link href="https://www.linkedin.com/company/verifieze" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[var(--color-primary)] transition-colors">
                 <Linkedin className="w-5 h-5" />
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-[var(--color-primary)] transition-colors">
-                <Instagram className="w-5 h-5" />
               </Link>
             </div>
           </div>
