@@ -4,11 +4,26 @@ import { NextResponse } from "next/server";
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { name, email, company, phone, services, message, website } = body;
+    const { name, email, company, phone, services, message, website, _clientTimestamp, _formLoadTime } = body;
 
-    // ── Honeypot bot protection ──────────────────────────────────────────
+    // ── Honeypot & Timing Bot Protection ──────────────────────────────────
+    
+    // 1. Check if invisible honeypot field is filled
     if (website && website.trim() !== "") {
       console.warn("Honeypot filled by bot. Silently ignoring submission.");
+      return NextResponse.json({ success: true });
+    }
+
+    // 2. Check if the submission was made directly to the API without JS
+    if (!_clientTimestamp || !_formLoadTime) {
+      console.warn("Missing timestamps. Likely direct API bot hit.");
+      return NextResponse.json({ success: true });
+    }
+
+    // 3. Check if form was submitted too fast (less than 3 seconds)
+    const timeToFill = _clientTimestamp - _formLoadTime;
+    if (timeToFill < 3000) {
+      console.warn(`Form submitted too fast (${timeToFill}ms). Bot detected.`);
       return NextResponse.json({ success: true });
     }
 

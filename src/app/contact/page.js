@@ -19,7 +19,7 @@ import {
   Calendar,
 } from "lucide-react";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CTA_Buttons from "@/components/CTA_Buttons";
 import { motion } from "framer-motion";
 import { containerVariants } from "@/animations/variants";
@@ -53,6 +53,11 @@ export default function Contact() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
+  const [loadTime, setLoadTime] = useState(0);
+
+  useEffect(() => {
+    setLoadTime(Date.now());
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -77,10 +82,18 @@ export default function Contact() {
     setSubmitStatus(null);
 
     try {
+      // Add a timestamp token to the payload to prove JS execution
+      // and calculate time taken to fill form
+      const payload = {
+        ...formData,
+        _clientTimestamp: Date.now(),
+        _formLoadTime: loadTime,
+      };
+
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       const data = await res.json();
@@ -264,7 +277,7 @@ export default function Contact() {
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Honeypot field (invisible to real users, but spam bots will fill it) */}
-                <div className="hidden" aria-hidden="true" style={{ display: 'none' }}>
+                <div className="absolute opacity-0 -z-50 pointer-events-none" style={{ left: '-9999px', top: '-9999px' }} aria-hidden="true">
                   <label htmlFor="website">Website Link (Leave empty)</label>
                   <input
                     type="text"
