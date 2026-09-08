@@ -127,7 +127,7 @@ export async function POST(request) {
             <p style="color: #333;">In the meantime, you can reach us directly at:</p>
             <ul style="color: #003366; font-weight: bold;">
               <li>📞 +94 112 746 010</li>
-              <li>✉️ checks@verifieze.com</li>
+              <li>✉️ hello@verifieze.com</li>
             </ul>
             <hr style="border: none; border-top: 1px solid #eee; margin: 24px 0;" />
             <p style="color: #999; font-size: 12px;">Verifieze (Pvt) Ltd — 01 Lake Cres, Colombo 02, Sri Lanka</p>

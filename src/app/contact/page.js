@@ -125,7 +125,7 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email Support",
-      details: ["checks@verifieze.com"],
+      details: ["hello@verifieze.com"],
       subtitle: "24/7 Email Support"
     },
     {
@@ -147,25 +147,25 @@ export default function Contact() {
       icon: Headphones,
       title: "Technical Support",
       description: "API integration, troubleshooting, and system status",
-      contact: "checks@verifieze.com"
+      contact: "hello@verifieze.com"
     },
     {
       icon: Users,
       title: "Sales Team",
       description: "Pricing, demos, and business inquiries",
-      contact: "checks@verifieze.com"
+      contact: "hello@verifieze.com"
     },
     {
       icon: Shield,
       title: "Compliance Team",
       description: "Data privacy, security, and regulatory questions",
-      contact: "checks@verifieze.com"
+      contact: "hello@verifieze.com"
     },
     {
       icon: MessageCircle,
       title: "Customer Success",
       description: "Account management and service optimization",
-      contact: "checks@verifieze.com"
+      contact: "hello@verifieze.com"
     }
   ];
 
@@ -428,7 +428,7 @@ export default function Contact() {
                 {submitStatus === 'error' && (
                   <div className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
                     <span className="text-red-600 text-lg flex-shrink-0">⚠</span>
-                    <p className="font-medium">Something went wrong. Please try again or email us directly at <a href="mailto:checks@verifieze.com" className="underline">checks@verifieze.com</a></p>
+                    <p className="font-medium">Something went wrong. Please try again or email us directly at <a href="mailto:hello@verifieze.com" className="underline">hello@verifieze.com</a></p>
                   </div>
                 )}
 
