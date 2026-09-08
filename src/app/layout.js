@@ -47,6 +47,11 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+          src="https://wayorock.com/tracking/track.js"
+          data-site="ak_e4145033e02fc89aa0e49ce6cd81fe23"
+          async
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
