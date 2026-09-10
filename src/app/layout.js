@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -47,12 +48,12 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <script
-          src="https://wayorock.com/tracking/track.js"
-          data-site="ak_e4145033e02fc89aa0e49ce6cd81fe23"
-          async
-        />
       </head>
+      <Script
+        src="https://wayorock.com/tracking/track.js"
+        data-site="ak_e4145033e02fc89aa0e49ce6cd81fe23"
+        strategy="afterInteractive"
+      />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
